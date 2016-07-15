@@ -1,0 +1,93 @@
+= render "partials/navigation"
+%div.welcome-header
+	%div.header-wrapper
+		%div.header
+			%img.img-responsive{:src => "/assets/soular1.jpg"}
+			%div.header-text.jumbotron
+				%h1 Welcome to Soular
+				%h4 Affordable Security Services
+
+
+
+%section.container
+	#why-soular.row
+		#power1.col-xs-4.col-sm-4.col-md-4.col-lg-4
+			%span
+				%i.glyphicon.glyphicon-refresh{"aria-hidden" => "true"}
+			%h4 Strong Protection
+		#power2.col-xs-4.col-sm-4.col-md-4.col-lg-4
+			%span
+				%i.glyphicon.glyphicon-ok{"aria-hidden" => "true"}
+			%h4 Excellent Service
+		#power3.col-xs-4.col-sm-4.col-md-4.col-lg-4
+			%span
+				%i.glyphicon.glyphicon-user{"aria-hidden" => "true"}
+			%h4 Computent
+	.tagLine.container
+		%p.tag-text
+			At Soular Security we understand that pressure is a privilege and we thrive on the highest expectation from our clients and their customers; giving unbeatable rates whilst delivering the highest quality of service.
+			Our offices are based in central London and with over 2 decades of experience, Soular has grown and adapted to the rapid rise and demand of the security industry, acquiring and maintaining lucrative contracts because of our excellent reputation and rapport we have built with our clients over the years.
+%section.callToAction
+	#cTa-text.container
+		%h3 All kind of Security Services
+		%ul
+			%li Co operate security
+			%li Events
+			%li Private Party
+		%p{:style => "color: #fff;"} If you have any security concerns or issues regarding your business, property, assets, valuables or VIP’s then Soular Security is the choice for you.
+		%button.btn{:type => "input"} read more
+%section#service-collection.container
+	.row
+		.col-xs-12.col-sm-12.col-md-6.col-lg-6.service-card-left
+			/ Showing the left service card
+			.col-xs-12.col-sm-6.col-md-6.col-lg-6.home-service-card
+				.img-card
+					%img{:alt => "Security", :src => "/assets/our-protect.jpg", :style => "width: 100%"}
+						%h5 Security Service
+						%hr
+				%p
+					This is a container1
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. centuries,
+				.linkButtons-left
+					%ul
+						%li
+							%button.btn.waves-effect.waves-light{:type => "button"} more
+			.col-xs-12.col-sm-6.col-md-6.col-lg-6.home-service-card
+				.img-card
+					%img{:alt => "Recruitment", :src => "/assets/recruitment.jpg", :style => "width: 100%"}
+						%h5 Training
+						%hr
+				%p
+					This is a container1
+					Lorem Ipsum is simply dummy text of the printing and typesetting industry. centuries,
+				.linkButtons-right
+					%ul
+						%li
+							%button.btn.waves-effect.waves-light{:type => "button"} see more
+		.col-xs-12.col-sm-12.col-md-6.col-lg-6.service-card-right
+			/ Showing the right hand service images
+			.card-wrap
+				%img{:alt => "Recruitment", :src => "/assets/recruitment.jpg"}
+			.img-card-text
+				%h3 Our Strong point
+%section.testimony-container
+	.testimony-container-cover
+		%h3 #Testimonies
+		.testimony
+			.testimony-wrapper
+				%img.responsive-img{:alt => "maxz", :src => "/assets/max.jpg"}
+		%h5 John Deo
+		%h6
+			%strong manager
+			Arsenal Football Club
+		%p
+			%q Since we started using Soular security, our customer base have improved
+
+%section.container
+	.row
+		#mission.col.s12.m6.l6
+			%h2 This is another div
+		.col.s12.m6.l6
+			%h2 Followed by another one
+
+= render "partials/footer"

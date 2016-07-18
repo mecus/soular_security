@@ -1,19 +1,19 @@
 = render "partials/navigation"
 .service-page
   .header-content
-    / <img src="src/images/security-2.jpg" alt="Header-img">
+    //<img src="assets/security-2.jpg" alt="Header-img">
   .header-text
     %h3 Services
     %h5 Browse through our service and make your choice
-%section.container
+%section.services.container
   #service-row-top.row
     .col-xs-12.col-sm-6.col-md-3.lg-3
       .service-card.z-depth-1
         %img.img-responsive{:alt => "Header-img", :src => "assets/security-2.jpg"}
           .service-card-text
             %h3 Security Guard
-            %a
-              %button{:type => "button"} browse
+            %a{:href => "/security_guard"}
+              %button browse
     .col-xs-12.col-sm-6.col-md-3.lg-3
       .service-card.z-depth-1
         %img.img-responsive{:alt => "Header-img", :src => "assets/security-2.jpg"}
@@ -78,3 +78,6 @@
           .service-card-text
             %h3 Industrial Security
             %button{:type => "button"} browse
+
+
+= render "partials/footer"

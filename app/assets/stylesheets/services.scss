@@ -6,6 +6,7 @@
     width: 100%;
     padding: 0px;
     margin: 0px;
+    margin-bottom: 0px;
     position: relative;
     z-index: -1;
     text-align: center;
@@ -33,6 +34,9 @@
         }
 
     }
+}
+section.services.container{
+    margin-top: 0px;
 }
 #service-row-top, #service-row-middle, #service-row-bottom{
     margin-bottom: 20px;

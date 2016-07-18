@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
-  resources :services
+  get 'services' => 'services#index'
+  get 'security_guard' => 'services#security_guard'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

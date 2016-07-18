@@ -10,19 +10,23 @@
 
 
 %section.container
+	%h1 #How we are?
 	#why-soular.row
 		#power1.col-xs-4.col-sm-4.col-md-4.col-lg-4
 			%span
 				%i.glyphicon.glyphicon-refresh{"aria-hidden" => "true"}
 			%h4 Strong Protection
+			%p This is just a random text
 		#power2.col-xs-4.col-sm-4.col-md-4.col-lg-4
 			%span
 				%i.glyphicon.glyphicon-ok{"aria-hidden" => "true"}
 			%h4 Excellent Service
+			%p This is just a random text
 		#power3.col-xs-4.col-sm-4.col-md-4.col-lg-4
 			%span
 				%i.glyphicon.glyphicon-user{"aria-hidden" => "true"}
 			%h4 Computent
+			%p This is just a random text
 	.tagLine.container
 		%p.tag-text
 			At Soular Security we understand that pressure is a privilege and we thrive on the highest expectation from our clients and their customers; giving unbeatable rates whilst delivering the highest quality of service.
@@ -38,50 +42,77 @@
 		%button.btn{:type => "input"} read more
 %section#service-collection.container
 	.row
-		.col-xs-12.col-sm-12.col-md-6.col-lg-6.service-card-left
+		.col-xs-12.col-sm-12.col-md-6.col-lg-6.service-card-left.home-service-card-col
 			/ Showing the left service card
-			.col-xs-12.col-sm-6.col-md-6.col-lg-6.home-service-card
-				.img-card
-					%img{:alt => "Security", :src => "/assets/our-protect.jpg", :style => "width: 100%"}
-						%h5 Security Service
-						%hr
-				%p
-					This is a container1
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. centuries,
-				.linkButtons-left
-					%ul
-						%li
-							%button.btn.waves-effect.waves-light{:type => "button"} more
-			.col-xs-12.col-sm-6.col-md-6.col-lg-6.home-service-card
-				.img-card
-					%img{:alt => "Recruitment", :src => "/assets/recruitment.jpg", :style => "width: 100%"}
-						%h5 Training
-						%hr
-				%p
-					This is a container1
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. centuries,
-				.linkButtons-right
-					%ul
-						%li
-							%button.btn.waves-effect.waves-light{:type => "button"} see more
-		.col-xs-12.col-sm-12.col-md-6.col-lg-6.service-card-right
+			.col-xs-12.col-sm-6.col-md-6.col-lg-6.home-service-card-col
+				.home-service-card
+					.img-card
+						%img{:alt => "Security", :src => "/assets/our-protect.jpg", :style => "width: 100%"}
+							%h5 Security Service
+							%hr
+						%p
+							This is a container1
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. centuries,
+					.linkButtons-left
+						%ul
+							%li
+								%button.btn.waves-effect.waves-light{:type => "button"} more
+			.col-xs-12.col-sm-6.col-md-6.col-lg-6.home-service-card-col
+				.home-service-card
+					.img-card
+						%img{:alt => "Recruitment", :src => "/assets/recruitment.jpg", :style => "width: 100%"}
+							%h5 Training
+							%hr
+						%p
+							This is a container1
+							Lorem Ipsum is simply dummy text of the printing and typesetting industry. centuries,
+					.linkButtons-right
+						%ul
+							%li
+								%button.btn.waves-effect.waves-light{:type => "button"} see more
+		.col-xs-12.col-sm-12.col-md-6.col-lg-6.service-card-right.home-service-card-col
 			/ Showing the right hand service images
 			.card-wrap
 				%img{:alt => "Recruitment", :src => "/assets/recruitment.jpg"}
 			.img-card-text
 				%h3 Our Strong point
+%section.container
+	.row.home-form
+		.col-xs-12.col-sm-6.col-md-6.col-lg-6
+			%h2 Instant Quotation
+			%p At Soular Security we understand that pressure is a privilege and we thrive on the highest expectation from our clients and their customers; giving unbeatable rates whilst delivering the highest quality of service. Our offices are based in central London and with over 2 decades of experience, Soular has grown and adapted to the rapid rise and demand of the security industry, acquiring and maintaining lucrative contracts because of our excellent reputation and rapport we have built with our clients over the years.
+		.col-xs-12.col-sm-6.col-md-6.col-lg-6
+			%form
+				.form-group
+					%label{:for => "exampleInputEmail1"} Email address
+					%input#exampleInputEmail1.form-control{:placeholder => "Email", :type => "email"}/
+				.form-group
+					%label{:for => "exampleInputPassword1"} Password
+					%input#exampleInputPassword1.form-control{:placeholder => "Password", :type => "password"}/
+				.form-group
+					%label{:for => "exampleInputFile"} File input
+					%input#exampleInputFile{:type => "file"}/
+					%p.help-block Example block-level help text here.
+					.checkbox
+						%label
+						%input{:type => "checkbox"}/
+						Check me out
+				%button.btn.btn-default{:type => "submit"} Submit
+
+
 %section.testimony-container
 	.testimony-container-cover
-		%h3 #Testimonies
+		%h3 #What people are saying about us
 		.testimony
 			.testimony-wrapper
 				%img.responsive-img{:alt => "maxz", :src => "/assets/max.jpg"}
-		%h5 John Deo
-		%h6
-			%strong manager
-			Arsenal Football Club
+		
 		%p
 			%q Since we started using Soular security, our customer base have improved
+		%h5 John Deo
+		%h6
+			%strong
+			Arsenal Club
 
 %section.container
 	.row

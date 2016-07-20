@@ -1,6 +1,10 @@
-$primary-color: #FF5714;
-$secondary-color: #990000;
-$other-color: #011627;
+
+body{
+  // background-color: gray;
+  ul>li{
+    list-style: none;
+  }
+}
 @media only screen and (min-width: 768px){
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
@@ -17,7 +21,7 @@ $other-color: #011627;
 }
 .navbar-top{
   position: relative;
-  background: $secondary-color;
+  background: #fff;
   height: 100px;
   border-radius: 0;
   border: 0px;
@@ -26,11 +30,18 @@ $other-color: #011627;
 }
 .navbar-low{
   position: relative;
-  // background: #000;
+  background-color: #000;
   border-radius: 0;
   border: 0px;
   margin: 0px;
   z-index: 1000;
+  li:hover{
+      background-color: $soular-red;
+  }
+  li.actives{
+    color: #fff;
+    background-color: $secondary-color;
+  }
 }
 .welcome-header{
   position: relative;
@@ -64,15 +75,42 @@ $other-color: #011627;
       width: 400px;
       margin-left: -200px;
       text-align: center;
-      h1, h4{color: #fff;}
+      h1{
+        color: #fff;
+        font-size: 3em;
+      } h4{color: #fff;}
     }
   }
 }
 .footer-container{
-  background-color: $secondary-color;
-  height: 400px;
+  margin: 50px auto;
+  ul{
+    padding: 0px;
+    margin: 0px;
+    li{
+      background-color: lightgray;
+      padding: 0 10px;
+      margin: 2px;
+      a{color: red;
+        text-decoration: none;
+        &:hover{padding-left: 10px; font-size: 1em;}
+      }
+    }
+  }
+  #widget-1, #widget-2, #widget-3{
+    h2{
+      font-size: 18px;
+    }
+  }
+  // background-color: $secondary-color;
+  // height: 400px;
 }
 .footer{
   height: 60px;
   background-color: $other-color;
+  ul>li{
+    display: inline-flex;
+    margin: 10px auto;
+    padding: 10px;
+  }
 }

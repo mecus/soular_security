@@ -6,11 +6,12 @@
 			%div.header-text.jumbotron
 				%h1 Welcome to Soular
 				%h4 Affordable Security Services
+				%a.btn.btn-success{:href => "#"} Get in touch
 
 
 
 %section.container
-	%h1 #How we are?
+	%h1 Who we are?
 	#why-soular.row
 		#power1.col-xs-4.col-sm-4.col-md-4.col-lg-4
 			%span
@@ -39,11 +40,13 @@
 			%li Events
 			%li Private Party
 		%p{:style => "color: #fff;"} If you have any security concerns or issues regarding your business, property, assets, valuables or VIP’s then Soular Security is the choice for you.
-		%button.btn{:type => "input"} read more
+		%button.btn.btn-success{:type => "input"} read more
 %section#service-collection.container
 	.row
+		%h1 What we do
 		.col-xs-12.col-sm-12.col-md-6.col-lg-6.service-card-left.home-service-card-col
 			/ Showing the left service card
+			
 			.col-xs-12.col-sm-6.col-md-6.col-lg-6.home-service-card-col
 				.home-service-card
 					.img-card
@@ -56,7 +59,7 @@
 					.linkButtons-left
 						%ul
 							%li
-								%button.btn.waves-effect.waves-light{:type => "button"} more
+								%button.btn.btn-success{:type => "button"} more
 			.col-xs-12.col-sm-6.col-md-6.col-lg-6.home-service-card-col
 				.home-service-card
 					.img-card
@@ -69,7 +72,7 @@
 					.linkButtons-right
 						%ul
 							%li
-								%button.btn.waves-effect.waves-light{:type => "button"} see more
+								%button.btn.btn-success{:type => "button"} see more
 		.col-xs-12.col-sm-12.col-md-6.col-lg-6.service-card-right.home-service-card-col
 			/ Showing the right hand service images
 			.card-wrap
@@ -78,47 +81,88 @@
 				%h3 Our Strong point
 %section.container
 	.row.home-form
-		.col-xs-12.col-sm-6.col-md-6.col-lg-6
+		%h1 Get in touch
+		.col-xs-12.col-sm-6.col-md-6.col-lg-6.quote-text
 			%h2 Instant Quotation
 			%p At Soular Security we understand that pressure is a privilege and we thrive on the highest expectation from our clients and their customers; giving unbeatable rates whilst delivering the highest quality of service. Our offices are based in central London and with over 2 decades of experience, Soular has grown and adapted to the rapid rise and demand of the security industry, acquiring and maintaining lucrative contracts because of our excellent reputation and rapport we have built with our clients over the years.
-		.col-xs-12.col-sm-6.col-md-6.col-lg-6
+		.col-xs-12.col-sm-6.col-md-6.col-lg-6.quote-form
 			%form
+				.form-group
+					%label{:for => "name"} Name
+					%input#name.form-control{:placeholder => "Your name", :type => "name"}/
+				.form-group
+					%label{:for => "companyName"} Company
+					%input#companyname.form-control{:placeholder => "Company Name", :type => "company name"}/
 				.form-group
 					%label{:for => "exampleInputEmail1"} Email address
 					%input#exampleInputEmail1.form-control{:placeholder => "Email", :type => "email"}/
 				.form-group
-					%label{:for => "exampleInputPassword1"} Password
-					%input#exampleInputPassword1.form-control{:placeholder => "Password", :type => "password"}/
+					%label{:for => "textarea"} Message
+					%textarea.form-control{:rows => "3"}
 				.form-group
-					%label{:for => "exampleInputFile"} File input
-					%input#exampleInputFile{:type => "file"}/
-					%p.help-block Example block-level help text here.
-					.checkbox
-						%label
-						%input{:type => "checkbox"}/
-						Check me out
-				%button.btn.btn-default{:type => "submit"} Submit
-
+					// %label{:for => "exampleInputFile"} File input
+					// %input#exampleInputFile{:type => "file"}/
+					// %p.help-block Please upload any file you want us to have a look at.
+					%h4 please choose your business size below
+					%ul 
+						%li
+							.checkbox
+								%label
+								%input{:type => "checkbox"}/
+								Small Business
+						%li
+							.checkbox
+								%label
+								%input{:type => "checkbox"}/
+								Medium Business
+						%li
+							.checkbox
+								%label
+								%input{:type => "checkbox"}/
+								Large Business
+				%button.btn.btn-success{:type => "submit"} Submit
+%section.news-container.container
+	%h1 Latest News
+	= render "partials/news"
 
 %section.testimony-container
-	.testimony-container-cover
+	.testimony-container-cover.container
 		%h3 #What people are saying about us
-		.testimony
+		.testimony.row
 			.testimony-wrapper
-				%img.responsive-img{:alt => "maxz", :src => "/assets/max.jpg"}
-		
-		%p
-			%q Since we started using Soular security, our customer base have improved
-		%h5 John Deo
-		%h6
-			%strong
-			Arsenal Club
+				.item.col-xs-12.col-sm-4.col-md-4.col-lg-4
+					%img.responsive-img{:alt => "...", :src => "/assets/max.jpg"}
+					.carousel-captions
+						%p
+							%q Since we started using Soular security, our customer base have improved
+						%h5 John Deo
+						%h6
+							%strong
+							Arsenal Club
+				.item.col-xs-12.col-sm-4.col-md-4.col-lg-4
+					%img.responsive-img{:alt => "...", :src => "/assets/max.jpg"}
+					.carousel-captions
+						%p
+							%q Since we started using Soular security, our customer base have improved
+						%h5 John Deo
+						%h6
+							%strong
+							Arsenal Club
+				.item.col-xs-12.col-sm-4.col-md-4.col-lg-4
+					%img.responsive-img{:alt => "...", :src => "/assets/max.jpg"}
+					.carousel-captions
+						%p
+							%q Since we started using Soular security, our customer base have improved
+						%h5 John Deo
+						%h6
+							%strong
+							Arsenal Club
 
-%section.container
-	.row
-		#mission.col.s12.m6.l6
-			%h2 This is another div
-		.col.s12.m6.l6
-			%h2 Followed by another one
+// %section.container
+// 	.row
+// 		#mission.col.s12.m6.l6
+// 			%h2 This is another div
+// 		.col.s12.m6.l6
+// 			%h2 Followed by another one
 
 = render "partials/footer"

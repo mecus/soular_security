@@ -1,15 +1,5 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-$primary-color: #FF5714;
-$secondary-color: #990000;
-$other-color: #011627;
 
-body{
-    background-color:#fff;
-    padding: 0px;
-    margin: 0 auto;
-}
+
 section.container{
     margin-top: 50px;
     h1{
@@ -34,7 +24,7 @@ section.container{
         font-size: 50px; 
 
         padding: 50px 0px 0px;
-        color: red;
+        color: $secondary-color;
     }
 
 }
@@ -107,8 +97,8 @@ section.container{
     }
 }
 .callToAction{
-    margin: 50px 0px;
-    background-color: #000;
+    margin: 50px auto;
+    background-color: $soular-red;
     height: 250px;
     #cTa-text{
     padding: 50px 0px;
@@ -118,6 +108,7 @@ section.container{
         }
     ul>li{color: grey; display: inline-flex; }
      }
+    //  .btn{background-color: #000; color: #fff;}
 }
 section#service-collection{
     margin-top: 50px;
@@ -166,7 +157,7 @@ section#service-collection{
             
         }
         .img-card-text{
-            background-color: red;
+            background-color: $secondary-color;
             margin: 0px;
             display: block;
             position: absolute;
@@ -210,47 +201,57 @@ section#service-collection{
         transition: 2s;
     }  
  } 
-
- .testimony-container{
-     margin: 50px auto;
-     height: 500px;
-     background-color: black;
-     background-image: url('./src/images/soular1.jpg');
-     background-attachment: fixed;
-     position: relative;
-     text-align: center;
-     p {color: #fff;}
-     h3{color: #fff;}
-     h6{color: lightcoral;}
-     h5{
-         color: #fff;
-     }
-     .testimony-container-cover{
-         background-color: #000;
-         height: 500px;
-         opacity: 0.9;
-         padding-top: 60px;
-        .testimony{
-         position: relative;
-         left: 50%;
-         margin-left: -100px;
-         display: block;
-         text-align: center;
-         width: 200px;
-         height: 200px;
-         background-color: aliceblue;
-         border-radius: 50%;
-         .testimony-wrapper{
-             background-color: black;
-             img{
-                 width: 200px;
-                 height: 200px;
-                 border-radius: 50%;
-                 border: 1px solid;
-                 border-color: #fff;
-                }
+.row.home-form{
+    margin-top: 50px;
+    .quote-text{
+        // background-color: $soular-red;
+        height: 500px;
+    }
+    .form-group{
+        ul>li{display: inline-flex;}
+    }
+}
+.testimony-container{
+    margin: 50px auto;
+    // height: 500px;
+    background-color: $soular-red;
+    background-image: url('./src/images/soular1.jpg');
+    background-attachment: fixed;
+    position: relative;
+    text-align: center;
+    p {color: #fff;}
+    h3{color: #fff;}
+    h6{color: lightcoral;}
+    h5{
+        color: #fff;
+    }
+    .testimony-container-cover{
+    //  background-color: #000;
+        // height: 500px;
+        h3{padding-bottom: 20px;}
+        opacity: 0.9;
+        padding: 60px 0px;
+    .testimony{
+        position: relative;
+        // left: 50%;
+        // margin-left: -100px;
+        display: block;
+        text-align: center;
+        // width: 200px;
+        // height: 200px;
+        // background-color: aliceblue;
+        // border-radius: 50%;
+        .testimony-wrapper{
+            background-color: black;
+            img{
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                border: 5px solid;
+                border-color: #fff;
             }
         }
-     }
+    }
+    }
 
- }
+}

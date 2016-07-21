@@ -37,10 +37,12 @@ body{
   z-index: 1000;
   li:hover{
       background-color: $soular-red;
+      // border-bottom: 3px solid;
+      // border-color: $soular-red;
   }
-  li.actives{
+  li.actives {
     color: #fff;
-    background-color: $secondary-color;
+    background-color: $secondary-color;;
   }
 }
 .welcome-header{

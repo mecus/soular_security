@@ -8,7 +8,17 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
   get 'services' => 'services#index'
-  get 'security_guard' => 'services#security_guard'
+  get 'services/security_guard' => 'services#security_guard'
+  get 'services/close_protection' => 'services#close_protection'
+  get 'services/event_security' => 'services#event_security'
+  get 'services/construction_security' => 'services#construction_security'
+  get 'services/hospitality_security' => 'services#hospitality_security'
+  get 'services/retail_security' => 'services#retail_security'
+  get 'services/concierge_security' => 'services#concierge_security'
+  get 'services/corporate_security' => 'services#corporate_security'
+  get 'services/hotel_security' => 'services#hotel_security'
+  get 'services/mobile_security' => 'services#mobile_security'
+  get 'services/industrial_security' => 'services#industrial_security'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

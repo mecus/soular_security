@@ -59,7 +59,8 @@
 					.linkButtons-left
 						%ul
 							%li
-								%button.btn.btn-success{:type => "button"} more
+								%button.btn.btn-success
+									%a{:href => "/services"} more
 			.col-xs-12.col-sm-6.col-md-6.col-lg-6.home-service-card-col
 				.home-service-card
 					.img-card
@@ -76,9 +77,9 @@
 		.col-xs-12.col-sm-12.col-md-6.col-lg-6.service-card-right.home-service-card-col
 			/ Showing the right hand service images
 			.card-wrap
-				%img{:alt => "Recruitment", :src => "/assets/recruitment.jpg"}
-			.img-card-text
-				%h3 Our Strong point
+				.img-card-text
+					%p Lorem Ipsum is simply dummy text of the printing and typesetting
+					
 %section.container
 	.row.home-form
 		%h1 Get in touch
@@ -126,37 +127,38 @@
 	= render "partials/news"
 
 %section.testimony-container
-	.testimony-container-cover.container
-		%h3 #What people are saying about us
-		.testimony.row
-			.testimony-wrapper
-				.item.col-xs-12.col-sm-4.col-md-4.col-lg-4
-					%img.responsive-img{:alt => "...", :src => "/assets/max.jpg"}
-					.carousel-captions
-						%p
-							%q Since we started using Soular security, our customer base have improved
-						%h5 John Deo
-						%h6
-							%strong
-							Arsenal Club
-				.item.col-xs-12.col-sm-4.col-md-4.col-lg-4
-					%img.responsive-img{:alt => "...", :src => "/assets/max.jpg"}
-					.carousel-captions
-						%p
-							%q Since we started using Soular security, our customer base have improved
-						%h5 John Deo
-						%h6
-							%strong
-							Arsenal Club
-				.item.col-xs-12.col-sm-4.col-md-4.col-lg-4
-					%img.responsive-img{:alt => "...", :src => "/assets/max.jpg"}
-					.carousel-captions
-						%p
-							%q Since we started using Soular security, our customer base have improved
-						%h5 John Deo
-						%h6
-							%strong
-							Arsenal Club
+	#testimony-container
+		.testimony-container-cover.container
+			%h3 #What people are saying about us
+			.testimony.row
+				.testimony-wrapper
+					.item.col-xs-12.col-sm-4.col-md-4.col-lg-4
+						%img.responsive-img{:alt => "...", :src => "/assets/max.jpg"}
+						.carousel-captions
+							%p
+								%q Since we started using Soular security, our customer base have improved
+							%h5 John Deo
+							%h6
+								%strong
+								Arsenal Club
+					.item.col-xs-12.col-sm-4.col-md-4.col-lg-4
+						%img.responsive-img{:alt => "...", :src => "/assets/max.jpg"}
+						.carousel-captions
+							%p
+								%q Since we started using Soular security, our customer base have improved
+							%h5 John Deo
+							%h6
+								%strong
+								Arsenal Club
+					.item.col-xs-12.col-sm-4.col-md-4.col-lg-4
+						%img.responsive-img{:alt => "...", :src => "/assets/max.jpg"}
+						.carousel-captions
+							%p
+								%q Since we started using Soular security, our customer base have improved
+							%h5 John Deo
+							%h6
+								%strong
+								Arsenal Club
 
 // %section.container
 // 	.row

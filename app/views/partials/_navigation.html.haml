@@ -3,7 +3,7 @@
     .container
       .navbar-header
         %a.navbar-brand{:href => "/"}
-          %h1 Soular Security
+          %h1.w3-animate-zoom Soular Security
       .nav.navbar.navbar-right
         %ul
           %li 020899745526
@@ -22,18 +22,40 @@
         -# %a.navbar-brand{:href => "#"} Soular Security
       / Collect the nav links, forms, and other content for toggling
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
-        %ul.nav.navbar-nav.navbar-right
+        %ul.nav.navbar-nav.navbar-right.w3-navbar
           %li.actives
             %a{:href => "/"}
               Home
               %span.sr-only (current)
-          %li
+          %li.w3-hover-green.w3-dropdown-hover
             %a{:href => "/services"}
               Services
-          %li
+            %div.w3-dropdown-content.w3-border
+              %div.w3-col.s6
+                %a.w3-hover-green{:href => "/services/security_guard"} Security Guard
+                %a.w3-hover-green{:href => "/services/close_protection"} Close Protection
+                %a.w3-hover-green{:href => "/services/event_security"} Event Security
+                %a.w3-hover-green{:href => "/services/construction_security"} Construction
+                %a.w3-hover-green{:href => "/services/hospitality_security"} Hospitality Security
+                %a.w3-hover-green{:href => "/services/retail_security"} Retail Security
+              %div.w3-col.s6
+                %a.w3-hover-green{:href => "/services/concierge_security"} Concierge Security
+                %a.w3-hover-green{:href => "/services/corporate_security"} Corporate Security
+                %a.w3-hover-green{:href => "/services/hotel_security"} Hotel Security
+                %a.w3-hover-green{:href => "/services/mobile_security"} Mobile Security
+                %a.w3-hover-green{:href => "/services/industrial_security"} Industrial Security
+
+
+          %li.w3-hover-blue
             %a{:href => "/about"}
               About
-          %li
+          %li.w3-hover-red
             %a{:href => "#"}
               Contact us
+          %li.w3-hover-grey
+            %a{:href => "#"}
+              Career
+          %li.w3-hover-grey
+            %a{:href => "#"}
+              Shop
 

@@ -19,6 +19,12 @@ body{
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
 }
+.navbar {
+    position: relative;
+    min-height: 35px; 
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+}
 .navbar-top{
   position: relative;
   background: #fff;
@@ -90,12 +96,12 @@ body{
     padding: 0px;
     margin: 0px;
     li{
-      background-color: lightgray;
+      // background-color: lightgray;
       padding: 0 10px;
       margin: 2px;
-      a{color: red;
+      a{color: grey;
         text-decoration: none;
-        &:hover{padding-left: 10px; font-size: 1em;}
+        &:hover{padding-left: 10px; font-size: 1em; color: red;}
       }
     }
   }

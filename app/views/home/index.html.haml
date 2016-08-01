@@ -1,35 +1,41 @@
 = render "partials/navigation"
 %div.welcome-header
 	%div.header-wrapper
-		%div.header
+		%div.header.mySlides
 			%img.img-responsive{:src => "/assets/soular1.jpg"}
-			%div.header-text.jumbotron
+			%div.header-text.jumbotron.w3-animate-zoom
 				%h1 Welcome to Soular
 				%h4 Affordable Security Services
 				%a.btn.btn-success{:href => "#"} Get in touch
+		%div.header.mySlides
+			%img.img-responsive{:src => "/assets/security-1.jpg"}
+			%div.header-text.jumbotron.w3-animate-opacity
+				%h1 Another Welcome to Soular
+				%h4 Affordable Security Services
+				
 
 
 
 %section.container
 	%h1 Who we are?
-	#why-soular.row
-		#power1.col-xs-4.col-sm-4.col-md-4.col-lg-4
-			%span
+	#why-soular.w3-row
+		#power1.w3-col.s4
+			%span 
 				%i.glyphicon.glyphicon-refresh{"aria-hidden" => "true"}
 			%h4 Strong Protection
-			%p This is just a random text
-		#power2.col-xs-4.col-sm-4.col-md-4.col-lg-4
+			%p We are strong to the core
+		#power2.w3-col.s4
 			%span
 				%i.glyphicon.glyphicon-ok{"aria-hidden" => "true"}
 			%h4 Excellent Service
-			%p This is just a random text
-		#power3.col-xs-4.col-sm-4.col-md-4.col-lg-4
+			%p Our service is no. one
+		#power3.w3-col.s4
 			%span
 				%i.glyphicon.glyphicon-user{"aria-hidden" => "true"}
 			%h4 Computent
-			%p This is just a random text
+			%p We take all our clients serious
 	.tagLine.container
-		%p.tag-text
+		%p.tag-text.w3-center
 			At Soular Security we understand that pressure is a privilege and we thrive on the highest expectation from our clients and their customers; giving unbeatable rates whilst delivering the highest quality of service.
 			Our offices are based in central London and with over 2 decades of experience, Soular has grown and adapted to the rapid rise and demand of the security industry, acquiring and maintaining lucrative contracts because of our excellent reputation and rapport we have built with our clients over the years.
 %section.callToAction
@@ -40,36 +46,39 @@
 			%li Events
 			%li Private Party
 		%p{:style => "color: #fff;"} If you have any security concerns or issues regarding your business, property, assets, valuables or VIP’s then Soular Security is the choice for you.
-		%button.btn.btn-success{:type => "input"} read more
+		%a{:href=>"/services"}
+			%button.btn.btn-success{:type => "input"} read more
 %section#service-collection.container
 	.row
 		%h1 What we do
 		.col-xs-12.col-sm-12.col-md-6.col-lg-6.service-card-left.home-service-card-col
 			/ Showing the left service card
 			
-			.col-xs-12.col-sm-6.col-md-6.col-lg-6.home-service-card-col
+			.col-xs-6.col-sm-6.col-md-6.col-lg-6.home-service-card-col
 				.home-service-card
 					.img-card
-						%img{:alt => "Security", :src => "/assets/our-protect.jpg", :style => "width: 100%"}
-							%h5 Security Service
-							%hr
-						%p
-							This is a container1
-							Lorem Ipsum is simply dummy text of the printing and typesetting industry. centuries,
+						%a{:href=>"/services"}
+							%img.w3-hover-opacity{:alt => "Security", :src => "/assets/our-protect.jpg", :style => "width: 100%"}
+						%h5 Security Service
+						%hr
+					%p
+						This is a container1
+						Lorem Ipsum is simply 
 					.linkButtons-left
 						%ul
 							%li
 								%button.btn.btn-success
 									%a{:href => "/services"} more
-			.col-xs-12.col-sm-6.col-md-6.col-lg-6.home-service-card-col
+			.col-xs-6.col-sm-6.col-md-6.col-lg-6.home-service-card-col
 				.home-service-card
 					.img-card
-						%img{:alt => "Recruitment", :src => "/assets/recruitment.jpg", :style => "width: 100%"}
-							%h5 Training
-							%hr
-						%p
-							This is a container1
-							Lorem Ipsum is simply dummy text of the printing and typesetting industry. centuries,
+						%a{:href=>"#"}
+							%img.w3-hover-opacity{:alt => "Recruitment", :src => "/assets/recruitment.jpg", :style => "width: 100%"}
+						%h5 Training
+						%hr
+					%p
+						This is a container1
+						Lorem Ipsum is simply dummy
 					.linkButtons-right
 						%ul
 							%li
@@ -133,7 +142,7 @@
 			.testimony.row
 				.testimony-wrapper
 					.item.col-xs-12.col-sm-4.col-md-4.col-lg-4
-						%img.responsive-img{:alt => "...", :src => "/assets/max.jpg"}
+						%img.responsive-img.w3-hover-opacity{:alt => "...", :src => "/assets/max.jpg"}
 						.carousel-captions
 							%p
 								%q Since we started using Soular security, our customer base have improved
@@ -142,7 +151,7 @@
 								%strong
 								Arsenal Club
 					.item.col-xs-12.col-sm-4.col-md-4.col-lg-4
-						%img.responsive-img{:alt => "...", :src => "/assets/max.jpg"}
+						%img.responsive-img.w3-hover-opacity{:alt => "...", :src => "/assets/max.jpg"}
 						.carousel-captions
 							%p
 								%q Since we started using Soular security, our customer base have improved
@@ -151,7 +160,7 @@
 								%strong
 								Arsenal Club
 					.item.col-xs-12.col-sm-4.col-md-4.col-lg-4
-						%img.responsive-img{:alt => "...", :src => "/assets/max.jpg"}
+						%img.responsive-img.w3-hover-opacity{:alt => "...", :src => "/assets/max.jpg"}
 						.carousel-captions
 							%p
 								%q Since we started using Soular security, our customer base have improved
@@ -159,6 +168,23 @@
 							%h6
 								%strong
 								Arsenal Club
+
+:javascript
+	var myIndex = 0;
+	carousel();
+
+	function carousel() {
+		var i;
+		var x = document.getElementsByClassName("mySlides");
+		for (i = 0; i < x.length; i++) {
+		 x[i].style.display = "none";
+		}
+		myIndex++;
+		if (myIndex > x.length) {myIndex = 1}
+		x[myIndex-1].style.display = "block";
+		setTimeout(carousel, 9000); // Change image every 2 seconds
+	}
+
 
 // %section.container
 // 	.row

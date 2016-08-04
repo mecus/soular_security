@@ -3,15 +3,22 @@
 	%div.header-wrapper
 		%div.header.mySlides
 			%img.img-responsive{:src => "/assets/soular1.jpg"}
-			%div.header-text.jumbotron.w3-animate-zoom
-				%h1 Welcome to Soular
-				%h4 Affordable Security Services
-				%a.btn.btn-success{:href => "#"} Get in touch
+			%div.header-text.jumbotron
+				%h1.w3-animate-zoom Welcome to Soular
+				%h4.w3-animate-bottom Affordable Security Services
+				%a.btn.btn-success.w3-animate-left{:href => "#"} Get in touch
 		%div.header.mySlides
-			%img.img-responsive{:src => "/assets/security-1.jpg"}
-			%div.header-text.jumbotron.w3-animate-opacity
-				%h1 Another Welcome to Soular
-				%h4 Affordable Security Services
+			%img.img-responsive{:src => "/assets/key-holding-1400x600.jpg"}
+			%div.header-text.jumbotron.w3-animate-zoom
+				%h1 Key Holding Sevices
+		%div.header.mySlides
+			%img.img-responsive{:src => "/assets/hotel_security.jpg"}
+			%div.header-text.jumbotron.w3-animate-zoom
+				%h1 Hotel Security Sevices
+		%div.header.mySlides
+			%img.img-responsive{:src => "/assets/mobile_security.jpg"}
+			%div.header-text.jumbotron.w3-animate-zoom
+				%h1 Mobile Patrol Sevices
 				
 
 
@@ -38,6 +45,7 @@
 		%p.tag-text.w3-center
 			At Soular Security we understand that pressure is a privilege and we thrive on the highest expectation from our clients and their customers; giving unbeatable rates whilst delivering the highest quality of service.
 			Our offices are based in central London and with over 2 decades of experience, Soular has grown and adapted to the rapid rise and demand of the security industry, acquiring and maintaining lucrative contracts because of our excellent reputation and rapport we have built with our clients over the years.
+		%a.btn.btn-primary{:href=>"#"} more
 %section.callToAction
 	#cTa-text.container
 		%h3 All kind of Security Services
@@ -74,7 +82,7 @@
 					.img-card
 						%a{:href=>"#"}
 							%img.w3-hover-opacity{:alt => "Recruitment", :src => "/assets/recruitment.jpg", :style => "width: 100%"}
-						%h5 Training
+						%h5 Public Sector
 						%hr
 					%p
 						This is a container1
@@ -89,48 +97,7 @@
 				.img-card-text
 					%p Lorem Ipsum is simply dummy text of the printing and typesetting
 					
-%section.container
-	.row.home-form
-		%h1 Get in touch
-		.col-xs-12.col-sm-6.col-md-6.col-lg-6.quote-text
-			%h2 Instant Quotation
-			%p At Soular Security we understand that pressure is a privilege and we thrive on the highest expectation from our clients and their customers; giving unbeatable rates whilst delivering the highest quality of service. Our offices are based in central London and with over 2 decades of experience, Soular has grown and adapted to the rapid rise and demand of the security industry, acquiring and maintaining lucrative contracts because of our excellent reputation and rapport we have built with our clients over the years.
-		.col-xs-12.col-sm-6.col-md-6.col-lg-6.quote-form
-			%form
-				.form-group
-					%label{:for => "name"} Name
-					%input#name.form-control{:placeholder => "Your name", :type => "name"}/
-				.form-group
-					%label{:for => "companyName"} Company
-					%input#companyname.form-control{:placeholder => "Company Name", :type => "company name"}/
-				.form-group
-					%label{:for => "exampleInputEmail1"} Email address
-					%input#exampleInputEmail1.form-control{:placeholder => "Email", :type => "email"}/
-				.form-group
-					%label{:for => "textarea"} Message
-					%textarea.form-control{:rows => "3"}
-				.form-group
-					// %label{:for => "exampleInputFile"} File input
-					// %input#exampleInputFile{:type => "file"}/
-					// %p.help-block Please upload any file you want us to have a look at.
-					%h4 please choose your business size below
-					%ul 
-						%li
-							.checkbox
-								%label
-								%input{:type => "checkbox"}/
-								Small Business
-						%li
-							.checkbox
-								%label
-								%input{:type => "checkbox"}/
-								Medium Business
-						%li
-							.checkbox
-								%label
-								%input{:type => "checkbox"}/
-								Large Business
-				%button.btn.btn-success{:type => "submit"} Submit
+/ = render "partials/contact_section"
 %section.news-container.container
 	%h1 Latest News
 	= render "partials/news"
@@ -151,7 +118,7 @@
 								%strong
 								Arsenal Club
 					.item.col-xs-12.col-sm-4.col-md-4.col-lg-4
-						%img.responsive-img.w3-hover-opacity{:alt => "...", :src => "/assets/max.jpg"}
+						%img.responsive-img.w3-hover-opacity{:alt => "...", :src => "/assets/arsenal.png"}
 						.carousel-captions
 							%p
 								%q Since we started using Soular security, our customer base have improved

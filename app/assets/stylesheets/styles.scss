@@ -101,7 +101,7 @@ body{
       margin: 2px;
       a{color: grey;
         text-decoration: none;
-        &:hover{padding-left: 10px; font-size: 1em; color: red;}
+        &:hover{padding-left: 10px; font-size: 1em; color: #fff; background-color: lightgray;}
       }
     }
   }

@@ -1,5 +1,6 @@
 
 .mySlides {display:none;}
+.w3-hidden{display: none;}
 
 section.container{
     margin-top: 50px;
@@ -102,16 +103,29 @@ section.container{
       margin-top: 50px;
       color: $other-color;
     }
+    .btn{
+        background: transparent;
+        border-color: $soular-red; 
+        color: $soular-red;
+        &:hover{background-color: $soular-red; color: #fff;}
+    }
 }
 .callToAction{
     margin: 50px auto;
     background-color: $soular-red;
-    height: 250px;
     #cTa-text{
         text-align: center;
         padding: 50px 0px;
-    h3 {
-        font-size: 1.5em;
+        button.btn{
+            margin-top: 20px;
+            background: $secondary-color;
+            border-color: #fff;
+            &:hover{
+                background-color: #fff;
+                color: grey;
+            }
+        }
+    h1 {
         color: white;
         }
     ul>li{color: grey; display: inline-flex; }
@@ -131,9 +145,23 @@ section#service-collection{
           background-color: white;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
           overflow: hidden;
+          p{padding: 0 10px; font-size: 12px !important;}
+          button.btn{
+            position: absolute;
+            bottom: 10px;
+            margin-top: 20;
+            margin-right: 20px;
+            background: transparent;
+            border-color: $soular-red;
+            color: $soular-red;
+            width: 100px;
+            &:hover{background-color: $soular-red; color: #fff;}
+            a{text-decoration: none; &:hover{color: #fff;}}
+            }
+
           .img-card{
-            h5{padding: 0 10px;}
-            p{padding: 0 10px;}
+            h5{padding: 0 10px; }
+            
           }
         
         }
@@ -167,23 +195,25 @@ section#service-collection{
             //     min-width: 400px;
             // }
             &:hover{
-               .img-card-text{
+               .w3-hidden{
                    height: 350px;
                    cursor: pointer; 
-                   p{display: block;}
+                   display: block;
                    }
+            }
+            .btn{
+                background: none;
+                border-color: $soular-red;
+                color: $soular-red;
+                width: 100px;
+                &:hover{background-color: $soular-red; color: #fff;}
             }
             
         }
         .img-card-text{
-            position: relative;
-            float: left;
             width: 100%;
-            height: 0px;
-            bottom: 0px;
-            // background-color: $secondary-color;
+            background-color: $soular-red;
             opacity: 0.9;
-            p{display: none;}
 
         }
     }  

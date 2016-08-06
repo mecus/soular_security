@@ -1,14 +1,39 @@
 = render "partials/navigation"
-.container
-    %h4= @title
-    %p Security Guards
-    We provide security guards who are the first point of reference at your venue and property; a deterrent to thieves, vandalism, damage, and unwanted individuals who could be a hazard or problem to the venue/property.
-    All of our security guards are SIA licensed and vetted for a minimum of 5 years; so you can rest assured that with Soular Security you are getting the highest standard of professionalism and work rate at the most cost effective price.
-    Benefits of having Soular Security guards
-    ●	We start by doing a full reconnaissance of your venue to understand and help improve your security risks
-    ●	Create an instant rapport with your management and staff, so they feel safe and confident to approach us regarding any issue security or otherwise
-    ●	Create a presence for your customers to feel safe and secure within the premises
-    ●	Approach and deter potential trespassers, vandalism and nuisances for the venue 
-    ●	Trained to deliver reception and concierge duties for corporate, apartment or office blocks
-    ●	Providing efficient CCTV, alarm and surveillance system operating systems
-    We can cover Security areas including Industrial, School, Office, factory, Warehouse, Business Parks, Retail, Leisure Parks, Shopping Centres, Clubs, Bars, Business’ that are public or privately owned; Soular Security can cover almost any venue, area or asset that needs manned security on any level.
+.service-header.w3-display-container
+    .service-image
+    .w3-display-middle.w3-large
+        %h1.w3-animate-zoom Security Guard
+/ .container.w3-row
+/     .w3-col.s3
+/         %h4 Services
+/     .w3-col.s7
+/         %h6 Home > Services > Security Guards
+/     .w3-col.s2
+/         %h4 News
+/ %hr
+.container.w3-row
+    .w3-col.s12.m3.l3.service-side-left
+        %h4 Services
+        = render "partials/service_nav"
+        %p We provide security guards who are the first point of reference at your venue and property; a deterrent to thieves, vandalism, damage, and unwanted individuals who could be a hazard or problem to the venue/property.
+    .w3-col.s12.m7.l7
+        %h6 Home > Services > Security Guards
+        %h4= @title
+        We provide security guards who are the first point of reference at your venue and property; a deterrent to thieves, vandalism, damage, and unwanted individuals who could be a hazard or problem to the venue/property.
+        All of our security guards are SIA licensed and vetted for a minimum of 5 years; so you can rest assured that with Soular Security you are getting the highest standard of professionalism and work rate at the most cost effective price.
+        Benefits of having Soular Security guards
+        .w3-ul
+            %li We start by doing a full reconnaissance of your venue to understand and help improve your security risks
+            %li Create an instant rapport with your management and staff, so they feel safe and confident to approach us regarding any issue security or otherwise
+            %li Create a presence for your customers to feel safe and secure within the premises
+            %li Approach and deter potential trespassers, vandalism and nuisances for the venue 
+            %li Trained to deliver reception and concierge duties for corporate, apartment or office blocks
+            %li Providing efficient CCTV, alarm and surveillance system operating systems
+        We can cover Security areas including Industrial, School, Office, factory, Warehouse, Business Parks, Retail, Leisure Parks, Shopping Centres, Clubs, Bars, Business’ that are public or privately owned; Soular Security can cover almost any venue, area or asset that needs manned security on any level.
+    .w3-col.s12.m2.l2
+        %h4 News
+        = render "partials/news_list"
+        %p We provide security guards who are the first point of reference at your venue and property; a deterrent to thieves, vandalism, damage, and unwanted individuals who could be a hazard or problem to the venue/property.
+
+
+= render "partials/footer"

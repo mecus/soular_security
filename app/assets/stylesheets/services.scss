@@ -1,4 +1,7 @@
-
+.service-header {
+    height: 400px;
+    background-color: red;
+}
 
 .service-page{
     width: 100%;
@@ -10,26 +13,38 @@
     text-align: center;
     .header-content{
         background-color: aquamarine;
+        background-image: url('service_header.jpg');
         margin: 0 auto;
         padding: 0px;
         box-sizing: border-box;
         width: 100%;
-        height: 400px; 
+        height: 500px; 
         overflow: hidden;
         position: relative;
         top: -50px;
         display: block;
+        .header-image-cover{
+            background-color: $soular_red;
+            height: 500px;
+            width: 100%;
+            opacity: 0.5;
+        }
+
     }
+
     .header-text {
         position: absolute;
-        top: 100px;
-        width: 20%;
+        top: 150px;
+        width: 50%;
         left: 50%;
-        margin-left: -10%;
-        h3{
-            font-family: Roboto, sans-serif;
+        margin-left: -25%;
+        h1{
+            // font-family: Roboto, sans-serif;
+            font-size: 4em;
             color: #fff;
+            text-transform: uppercase;
         }
+        h3{color: #fff;}
 
     }
 }
@@ -59,14 +74,20 @@ section.services.container{
             height: 25px;
             font-size: 10px;
             background: transparent;
-            color: gray;
+            color: $soular_red;
             border-radius: 4px;
             border: 1px solid;
-            border-color: gray;
+            border-color: $soular_red;
+            &:hover{
+                background-color: $soular_red;
+                color: #fff;
+            }
         }
     }
 }
-
+.service-side-left{
+    background-color: lightgray;
+}
 .z-depth-1{
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

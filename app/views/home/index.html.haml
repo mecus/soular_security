@@ -1,12 +1,13 @@
 = render "partials/navigation"
+
 %div.welcome-header
 	%div.header-wrapper
 		%div.header.mySlides
 			%img.img-responsive{:src => "/assets/soular1.jpg"}
 			%div.header-text.jumbotron
 				%h1.w3-animate-zoom Welcome to Soular
-				%h4.w3-animate-bottom Affordable Security Services
-				%a.btn.btn-success.w3-animate-left{:href => "#"} Get in touch
+				%h4.w3-animate-left Affordable Security Services
+				%a.btn.btn-success.w3-animate-bottom{:href => "#"} Get in touch
 		%div.header.mySlides
 			%img.img-responsive{:src => "/assets/key-holding-1400x600.jpg"}
 			%div.header-text.jumbotron.w3-animate-zoom
@@ -23,34 +24,35 @@
 
 
 
+
 %section.container
 	%h1 Who we are?
 	#why-soular.w3-row
 		#power1.w3-col.s4
 			%span 
 				%i.glyphicon.glyphicon-refresh{"aria-hidden" => "true"}
-			%h4 Strong Protection
+			%h4.w3-allerta Strong Protection
 			%p We are strong to the core
 		#power2.w3-col.s4
 			%span
 				%i.glyphicon.glyphicon-ok{"aria-hidden" => "true"}
-			%h4 Excellent Service
+			%h4.w3-allerta Excellent Service
 			%p Our service is no. one
 		#power3.w3-col.s4
 			%span
 				%i.glyphicon.glyphicon-user{"aria-hidden" => "true"}
-			%h4 Computent
+			%h4.w3-allerta Computent
 			%p We take all our clients serious
 	.tagLine.container
 		%p.tag-text.w3-center
 			At Soular Security we understand that pressure is a privilege and we thrive on the highest expectation from our clients and their customers; giving unbeatable rates whilst delivering the highest quality of service.
 			Our offices are based in central London and with over 2 decades of experience, Soular has grown and adapted to the rapid rise and demand of the security industry, acquiring and maintaining lucrative contracts because of our excellent reputation and rapport we have built with our clients over the years.
-		%a.btn.btn-primary{:href=>"#"} more
+		%a.btn.btn-primary{:href=>"/about"} more
 %section.callToAction
-	#cTa-text.container
-		%h3 All kind of Security Services
+	#cTa-text.container.w3-center
+		%h1.w3-allerta All kind of Security Services
 		%ul
-			%li Co operate security
+			%li Corporate security
 			%li Events
 			%li Private Party
 		%p{:style => "color: #fff;"} If you have any security concerns or issues regarding your business, property, assets, valuables or VIP’s then Soular Security is the choice for you.
@@ -67,35 +69,30 @@
 					.img-card
 						%a{:href=>"/services"}
 							%img.w3-hover-opacity{:alt => "Security", :src => "/assets/our-protect.jpg", :style => "width: 100%"}
-						%h5 Security Service
+						%h5 Security Services
 						%hr
 					%p
-						This is a container1
-						Lorem Ipsum is simply 
-					.linkButtons-left
-						%ul
-							%li
-								%button.btn.btn-success
-									%a{:href => "/services"} more
+						%span we offer an array of security service ranging from public and private in… 
+					.linkButtons-left.w3-center
+						%button.btn.btn-success
+							%a{:href => "/services"} more
 			.col-xs-6.col-sm-6.col-md-6.col-lg-6.home-service-card-col
 				.home-service-card
 					.img-card
 						%a{:href=>"#"}
 							%img.w3-hover-opacity{:alt => "Recruitment", :src => "/assets/recruitment.jpg", :style => "width: 100%"}
-						%h5 Public Sector
+						%h5 Skills Development
 						%hr
 					%p
-						This is a container1
-						Lorem Ipsum is simply dummy
-					.linkButtons-right
-						%ul
-							%li
-								%button.btn.btn-success{:type => "button"} see more
+						Staff personal development is one of our major focus
+					.linkButtons-right.w3-center
+						%button.btn.btn-success{:type => "button"} see more
 		.col-xs-12.col-sm-12.col-md-6.col-lg-6.service-card-right.home-service-card-col
 			/ Showing the right hand service images
-			.card-wrap
-				.img-card-text
-					%p Lorem Ipsum is simply dummy text of the printing and typesetting
+			.card-wrap.w3-display-container
+				.w3-display-middle.w3-large.w3-hidden.w3-padding-48
+					%h2.w3-animate-zoom{:style=>"color:#fff;"} At Soular you are assured a world of opportunities 
+					%span.btn.btn-danger.w3-animate-left more
 					
 / = render "partials/contact_section"
 %section.news-container.container

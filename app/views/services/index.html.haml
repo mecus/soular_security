@@ -1,10 +1,11 @@
 = render "partials/navigation"
 .service-page
   .header-content
-    //<img src="assets/security-2.jpg" alt="Header-img">
-  .header-text.w3-animate-zoom
-    %h3 Services
-    %h5 Browse through our service and make your choice
+    / %img{:src=>"assets/service_header.jpg", :alt=>"Header-img"}
+    .header-image-cover
+  .header-text.w3-center
+    %h1.w3-allerta.w3-animate-zoom Services
+    %h3.w3-animate-bottom Browse through our service and make your choice
 %section.services.container
   #service-row-top.row
     .col-xs-6.col-sm-6.col-md-3.lg-3

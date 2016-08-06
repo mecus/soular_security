@@ -1,2 +1,20 @@
 = render "partials/navigation"
-%h1 welcome to close protection
+.service-header.w3-display-container
+	.service-image
+		.w3-display-middle.w3-large
+			%h1.w3-animate-zoom Close Protection
+.container.w3-row
+	.w3-col.s3
+		%h4 Services
+	.w3-col.s6
+		%h6 Home > Services > Close Protection
+	.w3-col.s3
+		%h4 News
+%hr
+
+.container.w3-row
+	.w3-col.s3.service-side-left
+		= render "partials/service_nav"
+	.w3-col.s6
+		%h4= @title
+	.w3-col.s3

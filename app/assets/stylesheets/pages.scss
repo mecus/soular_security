@@ -1,0 +1,46 @@
+
+.page-container{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    z-index: -1;
+    text-align: center;
+    .about-image{background-image: url('security-2.jpg')}
+    .contact-image{background-image: url('service_header.jpg')}
+    .page-header{
+        background-color: aquamarine;
+        margin: 0 auto;
+        padding: 0px;
+        box-sizing: border-box;
+        width: 100%;
+        height: 500px; 
+        overflow: hidden;
+        position: relative;
+        top: -50px;
+        display: block;
+        .page-header-image-cover{
+            background-color: $soular_red;
+            height: 500px;
+            width: 100%;
+            opacity: 0.7;
+        }
+
+    }
+    .page-header-text {
+        position: absolute;
+        top: 150px;
+        width: 50%;
+        left: 50%;
+        margin-left: -25%;
+        h1{
+            // font-family: Roboto, sans-serif;
+            font-size: 4em;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        h3{color: #fff;}
+
+    }
+}

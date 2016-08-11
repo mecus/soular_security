@@ -22,6 +22,12 @@ body{
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
 }
+.navbar-brand{
+  img{
+    width: 150px;
+    height: 90px;
+  }
+}
 .navbar {
     position: relative;
     min-height: 35px; 
@@ -36,23 +42,53 @@ body{
   border: 0px;
   margin: 0px;
   z-index: 1000;
+  .social-icon i, a{
+    font-size: 25px;
+    text-decoration: none;
+  }
+
 }
+
+  // i.fa-facebook-square{color: blue;}
+  // i.fa-twitter-square{color: lightblue;}
+  // i.fa-linkedin-square{color: blue;}
 .navbar-low{
   position: relative;
-  background-color: #000;
+  background-color: $soular-black;
+  padding: 10px 0;
   border-radius: 0;
   border: 0px;
   margin: 0px;
   z-index: 1000;
+  li{
+    -webkit-transition: width 0.5s;
+    transition: width 0.5s;
+  }
   li:hover{
-      background-color: $soular-red;
-      // border-bottom: 3px solid;
-      // border-color: $soular-red;
+      // background-color: $soular-red;
+      border-bottom: 2px solid;
+      border-color: $soular-red;
+      -webkit-transition-timing-function: ease-in-out; 
+      transition-timing-function: ease-in-out;
   }
   li.actives {
     color: #fff;
-    background-color: $soular-red;
+    // background-color: $soular-red;
+    border-bottom: 2px solid;
+    border-color: $soular-red;
+
   }
+}
+.scroll-cavet{
+  position: absolute;
+  top: 79%;
+  left: 50%;
+  width: 50px;
+  margin-left: -25px;
+  i{color: #fff; font-size: 20px;}
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  &:hover{top: 80%; -webkit-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out;}
 }
 .welcome-header{
   position: relative;
@@ -95,7 +131,7 @@ body{
       h1{
         color: #fff;
         font-size: 3em;
-      } h4{color: #fff;}
+      } h5{color: #fff; letter-spacing: 1px; line-height: 18px;}
     }
   }
 }
@@ -114,6 +150,12 @@ body{
       }
     }
   }
+  #widget-3{
+    .social-icon i, a{
+      font-size: 35px;
+      text-decoration: none;
+    }
+  }
   #widget-1, #widget-2, #widget-3{
     h2{
       font-size: 18px;
@@ -124,7 +166,7 @@ body{
 }
 .footer{
   height: 60px;
-  background-color: $other-color;
+  background-color:$soular-black;
   ul>li{
     display: inline-flex;
     margin: 10px auto;

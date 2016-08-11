@@ -1,0 +1,40 @@
+%div.welcome-header
+	%div.header-wrapper
+		%div.header.mySlides
+			%img.img-responsive{:src => "/assets/soular1.jpg"}
+			%div.header-text.jumbotron
+				%h1.w3-animate-zoom Affordable Security
+				%h5.w3-animate-left We provide highest calibre of Security and staffing personnel.
+				%a.btn.btn-success.w3-animate-bottom{:href => "#"} Get in touch
+		/ %div.header.mySlides
+		/ 	%img.img-responsive{:src => "/assets/key-holding-1400x600.jpg"}
+		/ 	%div.header-text.jumbotron.w3-animate-zoom
+		/ 		%h1 Key Holding Sevices
+		/ %div.header.mySlides
+		/ 	%img.img-responsive{:src => "/assets/hotel_security.jpg"}
+		/ 	%div.header-text.jumbotron.w3-animate-zoom
+		/ 		%h1 Hotel Security Sevices
+		/ %div.header.mySlides
+		/ 	%img.img-responsive{:src => "/assets/mobile_security.jpg"}
+		/ 	%div.header-text.jumbotron.w3-animate-zoom
+		/ 		%h1 Mobile Patrol Sevices
+
+.scroll-cavet
+	%a{:href=>"#"}
+		%i.glyphicon.glyphicon-menu-down
+
+:javascript
+	var myIndex = 0;
+	carousel();
+
+	function carousel() {
+		var i;
+		var x = document.getElementsByClassName("mySlides");
+		for (i = 0; i < x.length; i++) {
+		 x[i].style.display = "none";
+		}
+		myIndex++;
+		if (myIndex > x.length) {myIndex = 1}
+		x[myIndex-1].style.display = "block";
+		setTimeout(carousel, 9000); // Change image every 2 seconds
+	}

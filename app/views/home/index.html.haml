@@ -1,32 +1,9 @@
 = render "partials/navigation"
-
-%div.welcome-header
-	%div.header-wrapper
-		%div.header.mySlides
-			%img.img-responsive{:src => "/assets/soular1.jpg"}
-			%div.header-text.jumbotron
-				%h1.w3-animate-zoom Welcome to Soular
-				%h4.w3-animate-left Affordable Security Services
-				%a.btn.btn-success.w3-animate-bottom{:href => "#"} Get in touch
-		%div.header.mySlides
-			%img.img-responsive{:src => "/assets/key-holding-1400x600.jpg"}
-			%div.header-text.jumbotron.w3-animate-zoom
-				%h1 Key Holding Sevices
-		%div.header.mySlides
-			%img.img-responsive{:src => "/assets/hotel_security.jpg"}
-			%div.header-text.jumbotron.w3-animate-zoom
-				%h1 Hotel Security Sevices
-		%div.header.mySlides
-			%img.img-responsive{:src => "/assets/mobile_security.jpg"}
-			%div.header-text.jumbotron.w3-animate-zoom
-				%h1 Mobile Patrol Sevices
-				
-
-
+= render "home_header"
 
 
 %section.container
-	%h1 Who we are?
+	%h1.w3-tag-line.w3-roboto Who we are
 	#why-soular.w3-row
 		#power1.w3-col.s4
 			%span 
@@ -60,7 +37,7 @@
 			%button.btn.btn-success{:type => "input"} read more
 %section#service-collection.container
 	.row
-		%h1 What we do
+		%h1.w3-tag-line.w3-roboto What we do
 		.col-xs-12.col-sm-12.col-md-6.col-lg-6.service-card-left.home-service-card-col
 			/ Showing the left service card
 			
@@ -69,9 +46,10 @@
 					.img-card
 						%a{:href=>"/services"}
 							%img.w3-hover-opacity{:alt => "Security", :src => "/assets/our-protect.jpg", :style => "width: 100%"}
-						%h5 Security Services
-						%hr
+						%h5.w3-allerta Security Services
+						
 					%p
+						%span we offer an array of security service ranging from public and private in… 
 						%span we offer an array of security service ranging from public and private in… 
 					.linkButtons-left.w3-center
 						%button.btn.btn-success
@@ -81,10 +59,11 @@
 					.img-card
 						%a{:href=>"#"}
 							%img.w3-hover-opacity{:alt => "Recruitment", :src => "/assets/recruitment.jpg", :style => "width: 100%"}
-						%h5 Skills Development
-						%hr
+						%h5.w3-allerta Skills Development
+						
 					%p
-						Staff personal development is one of our major focus
+						%span Staff personal development is one of our major focus
+						%span Staff personal development is one of our major focus
 					.linkButtons-right.w3-center
 						%button.btn.btn-success{:type => "button"} see more
 		.col-xs-12.col-sm-12.col-md-6.col-lg-6.service-card-right.home-service-card-col
@@ -96,7 +75,7 @@
 					
 / = render "partials/contact_section"
 %section.news-container.container
-	%h1 Latest News
+	%h1.w3-tag-line.w3-roboto Latest News
 	= render "partials/news"
 
 %section.testimony-container
@@ -106,48 +85,34 @@
 			.testimony.row
 				.testimony-wrapper
 					.item.col-xs-12.col-sm-4.col-md-4.col-lg-4
-						%img.responsive-img.w3-hover-opacity{:alt => "...", :src => "/assets/max.jpg"}
+						%img.responsive-img.w3-hover-opacity{:alt => "...", :src => "/assets/arsenal-manager.jpg"}
 						.carousel-captions
 							%p
 								%q Since we started using Soular security, our customer base have improved
-							%h5 John Deo
+							%h5 ( Ben Willo )
+							%h6
+								%strong
+								Big Chill House
+					.item.col-xs-12.col-sm-4.col-md-4.col-lg-4
+						%img.responsive-img.w3-hover-opacity{:alt => "...", :src => "/assets/arsena-wenger.jpg"}
+						.carousel-captions
+							%p
+								%q Since we started using Soular security, our customer base have improved
+							%h5 ( Asena Wenger )
 							%h6
 								%strong
 								Arsenal Club
 					.item.col-xs-12.col-sm-4.col-md-4.col-lg-4
-						%img.responsive-img.w3-hover-opacity{:alt => "...", :src => "/assets/arsenal.png"}
+						%img.responsive-img.w3-hover-opacity{:alt => "...", :src => "/assets/manager2.jpg"}
 						.carousel-captions
 							%p
 								%q Since we started using Soular security, our customer base have improved
-							%h5 John Deo
+							%h5 ( Lilian Bush )
 							%h6
 								%strong
-								Arsenal Club
-					.item.col-xs-12.col-sm-4.col-md-4.col-lg-4
-						%img.responsive-img.w3-hover-opacity{:alt => "...", :src => "/assets/max.jpg"}
-						.carousel-captions
-							%p
-								%q Since we started using Soular security, our customer base have improved
-							%h5 John Deo
-							%h6
-								%strong
-								Arsenal Club
+								Cargo Night Club
 
-:javascript
-	var myIndex = 0;
-	carousel();
 
-	function carousel() {
-		var i;
-		var x = document.getElementsByClassName("mySlides");
-		for (i = 0; i < x.length; i++) {
-		 x[i].style.display = "none";
-		}
-		myIndex++;
-		if (myIndex > x.length) {myIndex = 1}
-		x[myIndex-1].style.display = "block";
-		setTimeout(carousel, 9000); // Change image every 2 seconds
-	}
 
 
 // %section.container

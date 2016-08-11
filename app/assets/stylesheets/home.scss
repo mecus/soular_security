@@ -1,6 +1,7 @@
 
 .mySlides {display:none;}
 .w3-hidden{display: none;}
+.w3-tag-line{color: $soular-black; font-weight: 800; text-transform: uppercase;}
 
 section.container{
     margin-top: 50px;
@@ -21,7 +22,7 @@ section.container{
         h4{
             font-size: 16px;
         }
-        p{opacity: 0;}
+        p{opacity: 0; -webkit-transition: 1s; transition: 1s;}
     }
     i{
         font-size: 50px; 
@@ -30,9 +31,9 @@ section.container{
         color: $secondary-color;
 
     }
-    #power1:hover{p{opacity: 1; color: green; cursor: pointer;}}
-    #power2:hover{p{opacity: 1; color: green; cursor: pointer;}}
-    #power3:hover{p{opacity: 1; color: green; cursor: pointer;}}
+    #power1:hover{p{opacity: 1; color: green; cursor: pointer; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out;}}
+    #power2:hover{p{opacity: 1; color: green; cursor: pointer; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out;}}
+    #power3:hover{p{opacity: 1; color: green; cursor: pointer; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out;}}
 
 
 }
@@ -142,25 +143,25 @@ section#service-collection{
           padding: 0px;
           margin: 0 auto;
           height: 350px;
-          background-color: white;
+          background-color: $soular-black;
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
           overflow: hidden;
-          p{padding: 0 10px; font-size: 12px !important;}
+          p{padding: 0 10px; font-size: 12px !important; color: darken(#fff, 40%);}
           button.btn{
             position: absolute;
             bottom: 10px;
             margin-top: 20;
-            margin-right: 20px;
-            background: transparent;
+            margin-right: 10px;
+            background: $soular-red;
             border-color: $soular-red;
-            color: $soular-red;
+            color: #fff;
             width: 100px;
-            &:hover{background-color: $soular-red; color: #fff;}
-            a{text-decoration: none; &:hover{color: #fff;}}
+            &:hover{background-color: lightgrey; border-color: lightgrey; color: grey;}
+            a{text-decoration: none; &:hover{color: grey;}}
             }
 
           .img-card{
-            h5{padding: 0 10px; }
+            h5{padding: 0 10px; color: lightgrey; font-weight: 600;}
             
           }
         
@@ -176,6 +177,7 @@ section#service-collection{
         margin-left: 0px;
         position: relative;
         .card-wrap{
+            transition: 0.5s;
             background-image: url('guard.jpg');
             background-repeat: no-repeat;
             background-size: cover;
@@ -215,6 +217,18 @@ section#service-collection{
             background-color: $soular-red;
             opacity: 0.9;
 
+        }
+    }
+    .service-card-right{
+        overflow: hidden;
+        &:hover{
+            
+         .card-wrap{
+            overflow: hidden;
+            transform: scale(1.1,1.1);
+            -webkit-transition-timing-function: ease-in-out; 
+            transition-timing-function: ease-in-out;
+         }  
         }
     }  
 }

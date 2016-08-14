@@ -1,25 +1,29 @@
-%h1 Listing posts
+= render "partials/navigation"
+.container
+  %h1 Listing posts
 
-%table
-  %thead
-    %tr
-      %th Title
-      %th Subtitle
-      %th Body
-      %th
-      %th
-      %th
-
-  %tbody
-    - @posts.each do |post|
+  %table
+    %thead
       %tr
-        %td= post.title
-        %td= post.subtitle
-        %td= post.body
-        %td= link_to 'Show', post
-        %td= link_to 'Edit', edit_post_path(post)
-        %td= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %th Title
+        %th Images
+        %th Subtitle
+        %th Body
+        %th
+        %th
+        %th
 
-%br
+    %tbody
+      - @posts.each do |post|
+        %tr
+          %td= post.title
+          %td= image_tag post.image.url(:thumb)
+          %td= post.subtitle
+          %td= post.body
+          %td= link_to 'Show', post
+          %td= link_to 'Edit', edit_post_path(post)
+          %td= link_to 'Destroy', post, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-= link_to 'New Post', new_post_path
+  %br
+
+  = link_to 'New Post', new_post_path

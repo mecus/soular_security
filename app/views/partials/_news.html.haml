@@ -1,21 +1,37 @@
-%div.latest-news.row
-    %div.item-wrapper.col-xs-12.col-sm-3.col-md-3.col-lg-3
-        .news-item.w3-card-1
-            %img.img-responsive.w3-hover-opacity{:src =>"/assets/2.jpg"}
-            %h5 Security contract signing
-            / .btn.btn-primary{:href=>"#"} Read more
-    %div.item-wrapper.col-xs-12.col-sm-3.col-md-3.col-lg-3
-        .news-item.w3-card-1
-            %img.img-responsive.w3-hover-opacity{:src =>"/assets/1.jpg"}
-            %h5 Latest Security treat
-            / .btn.btn-primary{:href=>"#"} Read more
-    %div.item-wrapper.col-xs-12.col-sm-3.col-md-3.col-lg-3
-        .news-item.w3-card-1
-            %img.img-responsive.w3-hover-opacity{:src =>"/assets/3.jpg"}
-            %h5 German attacks britain
-            / .btn.btn-primary{:href=>"#"} Read more
-    %div.item-wrapper.col-xs-12.col-sm-3.col-md-3.col-lg-3
-        .news-item.w3-card-1
-            %img.img-responsive.w3-hover-opacity{:src =>"/assets/2.jpg"}
-            %h5 New security protection
-            / .btn.btn-primary{:href=>"#"} Read more
+%div.latest-news
+    - @posts.each_slice(4) do |post|
+        .row
+            - post.each do |post|
+                %div.item-wrapper.col-xs-6.col-sm-3.col-md-3.col-lg-3
+                    .news-item.z-depth-1
+                        = image_tag post.image.url(:medium, :class => 'img-responsive')
+                        / %img.img-responsive.w3-hover-opacity{:src =>"/assets/2.jpg"}
+                        = link_to post do
+                            %h5= post.title
+                        / .btn.btn-primary{:href=>"#"} Read more
+
+
+
+
+
+
+
+
+        / %div.item-wrapper.col-xs-12.col-sm-3.col-md-3.col-lg-3
+        /     .news-item.w3-card-1
+        /         %img.img-responsive.w3-hover-opacity{:src =>"/assets/1.jpg"}
+        /         %h5 Latest Security treat
+        /         / .btn.btn-primary{:href=>"#"} Read more
+        / %div.item-wrapper.col-xs-12.col-sm-3.col-md-3.col-lg-3
+        /     .news-item.w3-card-1
+        /         %img.img-responsive.w3-hover-opacity{:src =>"/assets/3.jpg"}
+        /         %h5 German attacks britain
+        /         / .btn.btn-primary{:href=>"#"} Read more
+        / %div.item-wrapper.col-xs-12.col-sm-3.col-md-3.col-lg-3
+        /     .news-item.w3-card-1
+        /         %img.img-responsive.w3-hover-opacity{:src =>"/assets/2.jpg"}
+        /         %h5 New security protection
+        /         / .btn.btn-primary{:href=>"#"} Read more
+        
+            
+            

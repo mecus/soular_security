@@ -2,8 +2,33 @@
 .latest-news{
     .item-wrapper{
         padding: 5px;
+
         .news-item{
+        	img {
+        		width: 100%;
+        		height: auto;
+        	}
+        	overflow: hidden;
            
         }
     }
+}
+.post-image-wrapper{
+	position: relative;
+	top: -10px;
+	.post-image{
+		height: 600px;
+		overflow: hidden;
+		img{
+			width: 100%;
+			min-width: 1200px;
+			min-height: 600px;
+		}
+	}
+	.post-title{
+		width: 50%;
+		position: absolute;
+		top: 450px;
+		left: 50%;
+	}
 }

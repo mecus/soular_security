@@ -1,14 +1,16 @@
 %div.latest-news
-    - @posts.each_slice(4) do |post|
+    - @posts.each_slice(6) do |post|
         .row
             - post.each do |post|
-                %div.item-wrapper.col-xs-6.col-sm-3.col-md-3.col-lg-3
-                    .news-item.z-depth-1
+                %div.item-wrapper.col-xs-4.col-sm-2.col-md-2.col-lg-2
+                    .news-item
                         = image_tag post.image.url(:medium, :class => 'img-responsive')
                         / %img.img-responsive.w3-hover-opacity{:src =>"/assets/2.jpg"}
                         = link_to post do
-                            %h5= post.title
-                        / .btn.btn-primary{:href=>"#"} Read more
+                            %h5{:style=>"font-size: 16px; text-align: center;"}= post.title
+                        %p{:style=>"font-size: 10px; text-align: center;"}= post.body
+                        = link_to post do
+                            %p{:style=>"color: red; font-size: 12px; text-align: center;"} Read more
 
 
 

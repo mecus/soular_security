@@ -130,14 +130,14 @@ body{
 }
 .scroll-cavet{
   position: absolute;
-  top: 79%;
+  top: 700px;
   left: 50%;
-  width: 50px;
-  margin-left: -25px;
+  width: 40px;
+  margin-left: -20px;
   i{color: #fff; font-size: 20px;}
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  &:hover{top: 80%; -webkit-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out;}
+  &:hover{top: 710px; -webkit-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out;}
 }
 .welcome-header{
   position: relative;
@@ -196,9 +196,19 @@ body{
       // background-color: lightgray;
       padding: 0 10px;
       margin: 2px;
+
       a{color: grey;
         text-decoration: none;
-        &:hover{padding-left: 10px; font-size: 1em; color: #fff; background-color: lightgray;}
+        -webkit-transition: 0.2s;
+        transition: 0.2s;
+        &:hover{
+          padding-left: 10px; 
+          font-size: 1em; 
+          color: #fff; 
+          background-color: lightgray;
+          -webkit-transition-timing-function: ease-in-out; 
+          transition-timing-function: ease-in-out;
+        }
       }
     }
   }
@@ -208,7 +218,7 @@ body{
       text-decoration: none;
     }
   }
-  #widget-1, #widget-2, #widget-3{
+  #widget-1, #widget-2, #widget-3, #widget-4{
     h2{
       font-size: 18px;
     }

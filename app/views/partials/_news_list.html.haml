@@ -1,28 +1,17 @@
 %div.latest-news.row
-    .w3-ul
-        %li
-            .news-item.w3-card-1
-                %img.img-responsive.w3-hover-opacity{:src =>"/assets/2.jpg"}
-                %h5 Security contract signing
-                / .btn.btn-primary{:href=>"#"} Read more
-    %hr
-    .w3-ul
-        %li
-            .news-item.w3-card-1
-                %img.img-responsive.w3-hover-opacity{:src =>"/assets/1.jpg"}
-                %h5 Latest Security treat
-                / .btn.btn-primary{:href=>"#"} Read more
-    %hr
-    .w3-ul
-        %li
-            .news-item.w3-card-1
-                %img.img-responsive.w3-hover-opacity{:src =>"/assets/3.jpg"}
-                %h5 German attacks britain
-                / .btn.btn-primary{:href=>"#"} Read more
-    %hr
-    .w3-ul
-        %li
-            .news-item.w3-card-1
-                %img.img-responsive.w3-hover-opacity{:src =>"/assets/2.jpg"}
-                %h5 New security protection
-                / .btn.btn-primary{:href=>"#"} Read more
+    - @posts.each do |post|
+        .w3-ul
+            %li
+                .news-item.w3-card-1
+                    / = image_tag post.image.url(:thumb)
+                    / %img.img-responsive.w3-hover-opacity{:src =>"/assets/2.jpg"}
+                    = link_to post do
+                        / .btn.btn-primary{:href=>"#"}
+                        %h5{:style=>"font-size: 16px; text-align: center;"}= post.title
+                    %p{:style=>"color: red; font-size: 12px; text-align: center;"}= post.created_at.to_formatted_s(:short)
+                    %p{:style=>"font-size: 10px; text-align: center;"}= post.body
+
+                    = link_to post do
+                        %p{:style=>"color: red; font-size: 12px; text-align: center;"} Read more
+                        
+        %hr

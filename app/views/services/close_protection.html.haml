@@ -2,19 +2,39 @@
 .service-header.w3-display-container
 	.service-image
 		.w3-display-middle.w3-large
-			%h1.w3-animate-zoom Close Protection
-.container.w3-row
-	.w3-col.s3
-		%h4 Services
-	.w3-col.s6
-		%h6 Home > Services > Close Protection
-	.w3-col.s3
-		%h4 News
-%hr
+			%h1.w3-animate-zoom.w3-allerta Close Protection
+/ .container.w3-row
+/ 	.w3-col.s3
+/ 		%h4 Services
+/ 	.w3-col.s6
+/ 		%h6 Home > Services > Close Protection
+/ 	.w3-col.s3
+/ 		%h4 News
+/ %hr
 
 .container.w3-row
-	.w3-col.s3.service-side-left
+	.w3-col.s12.m3.l3.service-side-left
+		%h4 Services
 		= render "partials/service_nav"
-	.w3-col.s6
+		%br
+		%hr
+		= render "partials/contact_widget"
+	.w3-col.s12.m7.l7.service-middle
+		%h6 Home > Services > Close Protection
 		%h4= @title
-	.w3-col.s3
+		%p Soular Security prides itself on the array of close protection services it has offered from an array of VIP figures from sporting, musical, performing arts and array of other well known public figures.
+		%p Soular Security offers fully licensed close protection operatives fully trained in protecting a principal VIP in a matter of high level threatening situations in the UK.
+		%h2 Benefit of using our services
+		.w3-ul
+			%li Dynamic, assertive individuals with observance that is second to none; providing the most efficient and specific needs for any individual requirements 
+			%li Highly trained and experienced operatives who fully understand the the field of CP work in a covert or overt situation
+			%li A consistently reliable service that to this day has our clients continually asking for our protection on a continual basis
+			%li An array of operatives that gives the principal the choice to portray a certain image i.e covert/overt 
+			%li Highly responsive and assertive communication skills to reassure our Principal and VIP’s if necessary 
+			%li The most affordable rates
+
+	.w3-col.s12.m2.l2.service-side-right
+		%h4 News
+		= render "partials/news_list"
+
+= render "partials/footer"

@@ -5,4 +5,19 @@
 		.page-header-image-cover
 			.page-header-text.w3-center
 				%h1.w3-allerta.w3-animate-zoom Contact Us
-				%h3.w3-animate-bottom Browse through our service and make your choice
+				%h3.w3-animate-bottom You can also find us on the following social media platforms
+				%ul#social-icon
+					%li
+						%a{:href=>"http://www.facebook.com"}
+							%i.fa.fa-facebook-square{"aria-hidden" => "true"}
+						%a{:href=>"http://www.twitter.com"}
+							%i.fa.fa-twitter-square{"aria-hidden" => "true"}
+						%a{:href=>"http://www.linkedin.com"}
+							%i.fa.fa-linkedin-square
+.page-content.container
+	= render "partials/contact_section"
+.contact-map{:style => "background-color: red; height: 450px;"}
+	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d20721.244060219047!2d-0.03911199654560829!3d51.483066330712155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2suk!4v1471516751061" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+= render "partials/footer"

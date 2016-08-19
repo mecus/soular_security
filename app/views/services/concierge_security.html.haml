@@ -1,5 +1,41 @@
 = render "partials/navigation"
+
 .service-header.w3-display-container
-    .service-image
-    .w3-display-middle.w3-large
-        %h1.w3-animate-zoom Concierge Security
+	.service-image
+		.service-image-wrapper
+			%img{:src=>"assets/concierge_security.jpg", :alt=>"Concierge Security"}
+	.w3-display-middle.w3-large.header-text
+		%h1.w3-animate-zoom.w3-allerta Concierge Security
+.container.w3-row.content-area
+	.w3-col.s12.m3.l3.service-side-left
+		%h4 Services
+		= render "partials/service_nav"
+		%br
+		%hr
+		= render "partials/contact_widget"
+
+	.w3-col.s12.m7.l7.service-middle
+		%h6 Home > Services > Concierge Security
+		%h4= @title
+		%p Here at Soular Security we offer a concierge security that is unbeatable for value and professionalism.
+		%p Our Concierge Security have garnered a reputation of the most reliable, friendly and approachable individuals, who not only do the job but create a strong rapport with staff, lodgers, workers and guests within the premises.
+		%h2 Benefits of having Soular concierge security
+		.w3-ul
+			%li First point of reference
+			%li Deterrent to vandals, thieves and unwanted nuisance
+			%li Deliveries taken
+			%li Parcels signed for
+			%li Items kept securely
+			%li Helping staff with overall management of the area
+		%p Our concierge at Soular are renowned for their efficient response, attention to detail and sharp awareness to any situation that could likely occur. 
+	.w3-col.s12.m2.l2.service-side-right
+		%h4 News
+		= render "partials/news_list"
+
+= render "partials/footer"
+/ %li First point of reference
+/ %li Deterrent to vandals, thieves and unwanted nuisance
+/ %li Deliveries taken
+/ %li Parcels signed for
+/ %li Items kept securely
+/ %li Helping staff with overall management of the area

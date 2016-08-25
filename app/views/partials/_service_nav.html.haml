@@ -1,23 +1,43 @@
 .w3-ul.service-list
-	%li.w3-padding-4.active-service 
-		%a{:href=>"/security_guard"} Security Guard
 	%li.w3-padding-4 
-		%a{:href=>"/close_protection"} Close Protection
+		%a{:href=>"security_guard", :class => "stabs" } Security Guard
 	%li.w3-padding-4 
-		%a{:href=>"/event_security"} Event Security
+		%a{:href=>"close_protection", :class => "stabs"} Close Protection
 	%li.w3-padding-4 
-		%a{:href=>"/construction_security"} Construction Security
+		%a{:href=>"event_security", :class => "stabs" } Event Security
 	%li.w3-padding-4 
-		%a{:href=>"/hospitality_security"} Hospitality Security
+		%a{:href=>"construction_security", :class => "stabs"} Construction Security
 	%li.w3-padding-4 
-		%a{:href=>"/retail_security"} Retail Security
+		%a{:href=>"hospitality_security", :class => "stabs"} Hospitality Security
 	%li.w3-padding-4 
-		%a{:href=>"/concierge_security"} Concierge Security
+		%a{:href=>"retail_security", :class => "stabs"} Retail Security
 	%li.w3-padding-4 
-		%a{:href=>"/corporate_security"} Corporate Security
+		%a{:href=>"concierge_security", :class => "stabs"} Concierge Security
 	%li.w3-padding-4 
-		%a{:href=>"/hotel_security"} Hotel Security
+		%a{:href=>"corporate_security", :class => "stabs"} Corporate Security
 	%li.w3-padding-4 
-		%a{:href=>"/mobile_security"} Mobile Security
+		%a{:href=>"hotel_security", :class => "stabs"} Hotel Security
 	%li.w3-padding-4 
-		%a{:href=>"/industrial_security"} Industrial Security
+		%a{:href=>"mobile_security", :class => "stabs"} Mobile Security
+	%li.w3-padding-4 
+		%a{:href=>"industrial_security", :class => "stabs"} Industrial Security
+
+
+:javascript
+	// $(document).ready(function(){
+	// 	$("a.stabs").click(function(){
+
+	// 		$("a.stabs.active").removeClass("active");
+	// 		$(this).addClass("active");
+	// 	});
+
+	// });
+
+	$(document).ready(function(){
+
+		var path = window.location.pathname.split("/").pop();
+
+		var target = $('.service-list a[href="'+path+'"]');
+
+		target.addClass('active');
+	});

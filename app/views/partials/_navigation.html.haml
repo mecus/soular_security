@@ -1,5 +1,5 @@
 %div.primary-nav
-  %nav.navbar.navbar-inverse.navbar-top
+  %nav.navbar.navbar-inverse.navbar-top#nagbar
     .container
       .navbar-header
         %a.navbar-brand.w3-animate-zoom{:href => "/"}
@@ -30,13 +30,12 @@
       / Collect the nav links, forms, and other content for toggling
       #bs-example-navbar-collapse-1.collapse.navbar-collapse
         %ul.nav.navbar-nav.navbar-right.w3-navbar
-          %li.actives
+          %li
             %a{:href => "/"}
               Home
-              %span.sr-only (current)
           %li.w3-dropdown-hover
-            %a{:href => "/services"}
-              Services
+            %a{:href => "services"}
+              What we do
               %i.glyphicon.glyphicon-triangle-bottom{:style=>"color: #c1001d;"}
             %div.w3-dropdown-content
               %div.w3-half
@@ -55,10 +54,10 @@
 
 
           %li
-            %a{:href => "/about"}
-              About
+            %a{:href => "about"}
+              Who we are
           %li
-            %a{:href => "/contact"}
+            %a{:href => "contact"}
               Contact us
           %li
             %a{:href => "#"}
@@ -67,3 +66,17 @@
             %a{:href => "#"}
               Shop
 
+:javascript
+
+  $(document).ready(function(){
+
+    var navpath = window.location.pathname.split("/").pop();
+
+    if (navpath == '') {
+      navpath = '/';
+    }
+
+    var target = $('li a[href="'+navpath+'"]');
+
+    target.addClass('actives');
+  });

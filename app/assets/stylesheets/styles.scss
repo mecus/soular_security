@@ -8,6 +8,7 @@ body{
 .w3-ul li{
   list-style: none;
 }
+
 // All Media Query start here >>
 @media only screen and (min-width: 768px){
     .col-1 {width: 8.33%;}
@@ -24,6 +25,28 @@ body{
     .col-12 {width: 100%;}
 }
 @media only screen and (max-width: 768px){
+  //Home Slider Media query
+  .slide-wrapper{
+    background-color: black;
+    position: relative;
+    margin: 0 auto;
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+    img{
+      position: relative;
+      top: -50px;
+      width: 100%;
+      min-width: 1200px;
+      min-height: 700px;
+      opacity: .5;
+      margin-left: -200px;
+      transition-timing-function: ease-in-out; 
+      -webkit-transition-timing-function: ease-in-out;
+    }
+  }
+  //Home Slider Media query Ends here
+
   .header-wrapper{
     .header{
       background-color: black;
@@ -103,28 +126,25 @@ body{
   // i.fa-linkedin-square{color: blue;}
 .navbar-low{
   position: relative;
-  background-color: $soular-black;
-  padding: 10px 0;
+  background-color: black;
+  padding: 4px 0px 0px 0px;
   border-radius: 0;
   border: 0px;
   margin: 0px;
   z-index: 1000;
   li{
-    -webkit-transition: width 0.5s;
-    transition: width 0.5s;
-  }
-  li:hover{
-      // background-color: $soular-red;
-      border-bottom: 2px solid;
-      border-color: $soular-red;
-      -webkit-transition-timing-function: ease-in-out; 
-      transition-timing-function: ease-in-out;
-  }
-  li.actives {
     color: #fff;
-    // background-color: $soular-red;
-    border-bottom: 2px solid;
+    font-size: 14px;
+  }
+  li a:hover{
+    color: red;
+      // border-bottom: 2px solid;
+      // border-color: $soular-red;
+  }
+  a.actives {
+    border-bottom: 3px solid;
     border-color: $soular-red;
+    color: #fff !important;
 
   }
 }
@@ -139,6 +159,35 @@ body{
   transition: 0.5s;
   &:hover{top: 710px; -webkit-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out;}
 }
+//Home slider styling
+.slide-wrapper{
+  background-color: black;
+  position: relative;
+  margin: 0 auto;
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+  img{
+    position: relative;
+    top: -50px;
+    width: 100%;
+    min-width: 1200px;
+    min-height: 700px;
+    opacity: .5;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .text-caption{
+    position: absolute;
+    top: 120px;
+
+    .jumbotron{
+      background: transparent;
+    }
+  }
+}
+
+//Home Header styling
 .welcome-header{
   position: relative;
   top: 0px;
@@ -201,11 +250,12 @@ body{
         text-decoration: none;
         -webkit-transition: 0.2s;
         transition: 0.2s;
+        font-size: 12px;
         &:hover{
           padding-left: 10px; 
-          font-size: 1em; 
-          color: #fff; 
-          background-color: lightgray;
+          font-size: 13px; 
+          color: $soular-red; 
+          // background-color: lightgray;
           -webkit-transition-timing-function: ease-in-out; 
           transition-timing-function: ease-in-out;
         }
@@ -213,6 +263,7 @@ body{
     }
   }
   #widget-3{
+    p{font-size: 13px;}
     .social-icon i, a{
       font-size: 35px;
       text-decoration: none;
@@ -235,5 +286,6 @@ body{
     display: inline-flex;
     margin: 10px auto;
     padding: 10px;
+
   }
 }

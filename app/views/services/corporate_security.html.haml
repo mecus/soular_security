@@ -1,5 +1,40 @@
 = render "partials/navigation"
 .service-header.w3-display-container
     .service-image
-    .w3-display-middle.w3-large
-        %h1.w3-animate-zoom Corporate Security
+        .service-image-wrapper
+            %img{:src=>"assets/corporate_security.jpg", :alt=>"Corporate Security"}
+            .image-filter
+    .w3-display-middle.w3-large.header-text
+        %h1.w3-animate-zoom.w3-allerta Corporate Security
+%ul#brocum.w3-animate-zoom.hidden-xs
+    %li
+        %a{ :href=>"/", :style=>"opacity: 0.4;"} Home >
+    %li
+        %a{ :href=>"/services", :style=>"opacity: 0.6;"} Services >
+    %li{ :href=>"#", :style=>"opacity: 1;"} Corporate Security
+.container.w3-row.content-area
+    .w3-col.s12.m3.l3.service-side-left.hidden-xs
+        %h4 Services
+        = render "partials/service_nav"
+        %br
+        %hr
+        = render "partials/contact_widget"
+
+    .w3-col.s12.m7.l7.service-middle
+        %h4= @title
+        %p Soular understands the highly professional environment it undertakes when deploying its operatives in a corporate setting and thus we pride ourselves on the fundamental necessity of delivering the most professional, well dressed security guards that there is to offer. 
+        %p Corporate venues can be bustling areas with workers and guests coming and going; At Soular we guarantee that we can provide the most efficient, observant and vigilant security workers that will keep the workspace running safely and smoothly.
+        %h2 Benefits of having Soular Security for your Corporate/Office space.
+        .w3-ul.service-point
+            %li Meeting and greeting service
+            %li Professionally dressed and second to none communication skills
+            %li First point of deterrent with regards to trespassers and intruders
+            %li Sign in/Sign out service 
+            %li Badge operators for guests and visitors
+          
+    
+    .w3-col.s12.m2.l2.service-side-right
+        %h4 News
+        = render "partials/news_list"
+
+= render "partials/footer"

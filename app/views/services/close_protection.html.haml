@@ -1,26 +1,26 @@
 = render "partials/navigation"
 .service-header.w3-display-container
 	.service-image
-		.w3-display-middle.w3-large
-			%h1.w3-animate-zoom.w3-allerta Close Protection
-/ .container.w3-row
-/ 	.w3-col.s3
-/ 		%h4 Services
-/ 	.w3-col.s6
-/ 		%h6 Home > Services > Close Protection
-/ 	.w3-col.s3
-/ 		%h4 News
-/ %hr
+		.service-image-wrapper
+			%img{:src=>"assets/close_protection.jpg", :alt=>"close protection"}
+			.image-filter
+	.w3-display-middle.w3-large.header-text
+		%h1.w3-animate-zoom.w3-allerta Close Protection
+%ul#brocum.w3-animate-zoom.hidden-xs
+	%li
+		%a{ :href=>"/", :style=>"opacity: 0.4;"} Home >
+	%li
+		%a{ :href=>"/services", :style=>"opacity: 0.6;"} Services >
+	%li{ :href=>"#", :style=>"opacity: 1;"} Close Protection
 
-.container.w3-row
-	.w3-col.s12.m3.l3.service-side-left
+.container.w3-row.content-area
+	.w3-col.s12.m3.l3.service-side-left.hidden-xs
 		%h4 Services
 		= render "partials/service_nav"
 		%br
 		%hr
 		= render "partials/contact_widget"
 	.w3-col.s12.m7.l7.service-middle
-		%h6 Home > Services > Close Protection
 		%h4= @title
 		%p Soular Security prides itself on the array of close protection services it has offered from an array of VIP figures from sporting, musical, performing arts and array of other well known public figures.
 		%p Soular Security offers fully licensed close protection operatives fully trained in protecting a principal VIP in a matter of high level threatening situations in the UK.

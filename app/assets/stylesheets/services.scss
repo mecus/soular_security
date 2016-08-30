@@ -17,6 +17,8 @@
                 min-height: 400px;
                 z-index: 0;
                 opacity: 0.6;
+                transition: 1s;
+                -webkit-transition: 1s;
             }
             .image-filter{
                 position: relative;
@@ -32,8 +34,44 @@
         color: #fff;
     }
 }
+@media only screen and (max-width: 768px){
+    .service-image-wrapper{
+        position: relative;
+        background-color: #000;
+        img{
+            position: relative;
+            width: 100%;
+            min-height: 400px;
+            z-index: 0;
+            opacity: 0.6;
+            margin-left: -250px;
+            transition-timing-function: ease-in-out; 
+            -webkit-transition-timing-function: ease-in-out;
+        }
+        .image-filter{
+            position: relative;
+            // background-color: blue;
+            height: 400px;
+            z-index: 999;
+            opacity: 0.3;
+        }
+    }
+}
 .content-area{
     // background-color: #fff111;
+    margin-bottom: 50px;
+}
+#brocum{
+    position: absolute;
+    top: 500px;
+    left: 50px;
+    li, a{
+        display: inline;
+        color: #fff;
+        list-style: none;
+        text-decoration: none;
+        &:hover{color: #c1001d;}
+    }
 }
 
 .service-page{
@@ -119,6 +157,7 @@ section.services.container{
     }
 }
 .service-side-left{
+    h4{font-size: 25px !important;}
     // background-color: lightgray;
     .service-list{
         .active{
@@ -127,18 +166,21 @@ section.services.container{
             color: #fff;
             background-color: lighten($soular-red, 0.5);
             border-radius: 4px;
+            font-size: 16px;
         }
         a.stabs{ text-decoration: none; &:hover{color: #fff;} }
         a.stabs{
             // padding: 5px 5px;
             -webkit-transition: 0.2s;
             transition: 0.2s;
+            font-size: 14px;
             &:hover{
                 padding: 5px 15px;
                 text-decoration: none;
                 background-color: lighten($soular-red, 0.5);
                 border-radius: 4px;
                 color: #fff;
+                font-size: 14px;
                 -webkit-transition-timing-function: ease-in-out;
                 transition-timing-function: ease-in-out;
             }
@@ -148,7 +190,8 @@ section.services.container{
 .service-middle{
     padding: 0px 20px;
     .w3-ul li{
-        padding-left: 50px;
+        margin-left: 50px;
+        padding-left: 10px;
         list-style-type: square;
     }
 }

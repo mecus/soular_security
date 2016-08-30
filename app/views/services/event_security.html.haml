@@ -1,5 +1,42 @@
 = render "partials/navigation"
 .service-header.w3-display-container
     .service-image
-    .w3-display-middle.w3-large
-        %h1.w3-animate-zoom Event Security
+        .service-image-wrapper
+            %img{:src=>"assets/event_security.jpg", :alt=>"Event Security"}
+            .image-filter
+    .w3-display-middle.w3-large.header-text
+        %h1.w3-animate-zoom.w3-allerta Event Security
+%ul#brocum.w3-animate-zoom.hidden-xs
+    %li
+        %a{ :href=>"/", :style=>"opacity: 0.4;"} Home >
+    %li
+        %a{ :href=>"/services", :style=>"opacity: 0.6;"} Services >
+    %li{ :href=>"#", :style=>"opacity: 1;"} Event Security
+.container.w3-row.content-area
+    .w3-col.s12.m3.l3.service-side-left.hidden-xs
+        %h4 Services
+        = render "partials/service_nav"
+        %br
+        %hr
+        = render "partials/contact_widget"
+
+    .w3-col.s12.m7.l7.service-middle
+        %h4= @title
+        %p Here at Soular Security we have assisted with managing and controlling numbers up to 25,000+ individuals including customers and staff in a range of outdoor and indoor services including.
+        
+        %h2 Benefits of using our Services.
+        .w3-ul.service-point
+            %li Festivals/Concerts
+            %li Parties (Private and Public)
+            %li Corporate/conference events
+            %li Rave and club projects
+            %li Sporting events
+            %li Charities and Weddings
+            %li Award ceremonies
+        %p Our fully SIA licensed team will provide an efficient, observant, and responsive presence to the challenging numbers that event operations requires
+        %p One of our strongest assets at Soular Security is our communication skills throughout the team and to their customers providing a quality service that is unmatched; committed to giving our customers and staff a courteous and respectful service, so that everyone can have an enjoyable yet safe experience.
+    .w3-col.s12.m2.l2.service-side-right
+        %h4 News
+        = render "partials/news_list"
+
+= render "partials/footer"

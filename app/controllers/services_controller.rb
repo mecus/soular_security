@@ -13,7 +13,7 @@ class ServicesController < ApplicationController
     @posts = Post.all.paginate(:page => params[:page], :per_page => 4).order('created_at DESC')
     @title = "Event Security Services"
   end
-  def contruction_security
+  def construction_security
     @posts = Post.all.paginate(:page => params[:page], :per_page => 4).order('created_at DESC')
     @title = "Construction Security Services"
   end

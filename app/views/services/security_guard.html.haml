@@ -6,16 +6,15 @@
             .image-filter
     .w3-display-middle.w3-large.header-text
         %h1.w3-animate-zoom.w3-allerta Security Guard
-/ .container.w3-row
-/     .w3-col.s3
-/         %h4 Services
-/     .w3-col.s7
-/         %h6 Home > Services > Security Guards
-/     .w3-col.s2
-/         %h4 News
-/ %hr
+%ul#brocum.w3-animate-zoom.hidden-xs
+    %li
+        %a{ :href=>"/", :style=>"opacity: 0.4;"} Home >
+    %li
+        %a{ :href=>"/services", :style=>"opacity: 0.6;"} Services >
+    %li{ :href=>"#", :style=>"opacity: 1;"} Security Guards
+
 .container.w3-row.content-area
-    .w3-col.s12.m3.l3.service-side-left
+    .w3-col.s12.m3.l3.service-side-left.hidden-xs
         %h4 Services
         = render "partials/service_nav"
         %br
@@ -23,12 +22,11 @@
         = render "partials/contact_widget"
 
     .w3-col.s12.m7.l7.service-middle
-        %h6 Home > Services > Security Guards
         %h4= @title
         %p We provide security guards who are the first point of reference at your venue and property; a deterrent to thieves, vandalism, damage, and unwanted individuals who could be a hazard or problem to the venue/property.
         %p All of our security guards are SIA licensed and vetted for a minimum of 5 years; so you can rest assured that with Soular Security you are getting the highest standard of professionalism and work rate at the most cost effective price.
         %h2 Benefits of using our Services.
-        .w3-ul
+        .w3-ul.service-point
             %li We start by doing a full reconnaissance of your venue to understand and help improve your security risks
             %li Create an instant rapport with your management and staff, so they feel safe and confident to approach us regarding any issue security or otherwise
             %li Create a presence for your customers to feel safe and secure within the premises

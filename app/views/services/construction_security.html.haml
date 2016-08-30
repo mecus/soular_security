@@ -1,5 +1,40 @@
 = render "partials/navigation"
 .service-header.w3-display-container
     .service-image
-    .w3-display-middle.w3-large
-        %h1.w3-animate-zoom Construction Security
+        .service-image-wrapper
+            %img{:src=>"assets/construction_security.jpg", :alt=>"Construction Security"}
+            .image-filter
+    .w3-display-middle.w3-large.header-text
+        %h1.w3-animate-zoom.w3-allerta Construction Security
+%ul#brocum.w3-animate-zoom.hidden-xs
+    %li
+        %a{ :href=>"/", :style=>"opacity: 0.4;"} Home >
+    %li
+        %a{ :href=>"/services", :style=>"opacity: 0.6;"} Services >
+    %li{ :href=>"#", :style=>"opacity: 1;"} Construction Security
+.container.w3-row.content-area
+    .w3-col.s12.m3.l3.service-side-left.hidden-xs
+        %h4 Services
+        = render "partials/service_nav"
+        %br
+        %hr
+        = render "partials/contact_widget"
+
+    .w3-col.s12.m7.l7.service-middle
+        %h4= @title
+        %p Soular Security offers a construction site security service that allows our clients to leave their multimillion pound sites, rest assured that their assets, commodity, property are in the safest of hands. 
+        %p With our constant patrolling in operation our highly trained guards are securing each site with the greatest attention to detail to ensure 100% guaranteed service delivery everytime.
+        %h2 Benefits of having our team on your construction site.
+        .w3-ul.service-point
+            %li We offer our experienced insight on how to manage, protect and serve your needs so that we can achieve the results necessary for your site on a 24/7 basis
+            %li Front of house guards for visitor and staff access
+            %li Signatures for deliveries as well as holding goods securely
+            %li Onsite CCTV monitoring
+            %li Health and safety checks on fire exits, potential hazards and observance of correct personal protective equipment on each worker/guest who enters the site
+          
+        %p Soular Security understands that expensive equipment, machinery, and tools reside on construction sites and we have a 100% track record in protecting and maintaining the site; leaving your mind rest assured that once you leave the site after a hard days work and return the next day, your site will have remained exactly as you left it.
+    .w3-col.s12.m2.l2.service-side-right
+        %h4 News
+        = render "partials/news_list"
+
+= render "partials/footer"

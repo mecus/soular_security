@@ -7,4 +7,13 @@ class HomeController < ApplicationController
   end
   def contact
   end
+  def career
+  	
+  end
+  def shop
+  	
+  end
+  def blog
+  	@posts = Post.all.paginate(:page => params[:page], :per_page => 6).order('created_at DESC')
+  end
 end

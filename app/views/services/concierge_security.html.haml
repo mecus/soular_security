@@ -6,8 +6,16 @@
 			%img{:src=>"assets/concierge_security.jpg", :alt=>"Concierge Security"}
 	.w3-display-middle.w3-large.header-text
 		%h1.w3-animate-zoom.w3-allerta Concierge Security
+
+%ul#brocum.w3-animate-zoom.hidden-xs
+	%li
+		%a{ :href=>"/", :style=>"opacity: 0.4;"} Home >
+	%li
+		%a{ :href=>"/services", :style=>"opacity: 0.6;"} Services >
+	%li{ :href=>"#", :style=>"opacity: 1;"} Concierge Security
+
 .container.w3-row.content-area
-	.w3-col.s12.m3.l3.service-side-left
+	.w3-col.s12.m3.l3.service-side-left.hidden-xs
 		%h4 Services
 		= render "partials/service_nav"
 		%br
@@ -15,7 +23,6 @@
 		= render "partials/contact_widget"
 
 	.w3-col.s12.m7.l7.service-middle
-		%h6 Home > Services > Concierge Security
 		%h4= @title
 		%p Here at Soular Security we offer a concierge security that is unbeatable for value and professionalism.
 		%p Our Concierge Security have garnered a reputation of the most reliable, friendly and approachable individuals, who not only do the job but create a strong rapport with staff, lodgers, workers and guests within the premises.

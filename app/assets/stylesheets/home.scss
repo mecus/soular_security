@@ -271,20 +271,20 @@ section#service-collection{
     }
 }
 .testimony-container{
-        margin: 50px auto;
+        margin-top: 50px;
         background-color: $soular-red;
         background-image: url('construction.jpg');
         background-attachment: fixed;
         position: relative;
         text-align: center;
-        p {color: #fff;}
-        h3{color: #fff;}
+        p {color: $soular-black;}
+        h3{color: $soular-black;}
         h6{color: lightcoral;}
         h5{
-            color: #fff;
+            color: $soular-black;
         }
         #testimony-container{
-            background-color: $soular-red;
+            background-color: #ebeff1;
             opacity: 0.8;
             .testimony-container-cover{
             //  background-color: #000
@@ -310,9 +310,89 @@ section#service-collection{
                         border: 5px solid;
                         border-color: #fff;
                     }
+                    .carousel-captions{
+                        p{
+                            padding: 5px 20px;
+                        }
+                    }
                 }
             }
             }
 
     }
 }
+
+
+/* Fade transition for carousel items */
+// .carousel-control{
+//     position: absolute;
+//     top: 500px;
+//     margin: 0 50px;
+// }
+
+// .carousel, .item {
+//     left: 0 !important;
+//       -webkit-transition: opacity .4s; /*adjust timing here */
+//          -moz-transition: opacity .4s;
+//            -o-transition: opacity .4s;
+//               transition: opacity .4s;
+// }
+// .carousel-control {
+//     background-image: none !important; /* remove background gradients on controls */
+// }
+
+
+// /* Fade controls with items */
+// .carousel-fade, .carousel-inner, .item {
+//   opacity: 0;
+//   transition-property: opacity;
+// }
+
+// .carousel-fade, .carousel-inner, .active {
+//   opacity: 1;
+// }
+
+// .carousel-fade, .carousel-inner, .active.left,
+// .carousel-fade, .carousel-inner, .active.right {
+//   left: 0;
+//   opacity: 0;
+//   z-index: 1;
+// }
+
+// .carousel-fade, .carousel-inner, .next.left,
+// .carousel-fade, .carousel-inner, .prev.right {
+//   opacity: 1;
+// }
+
+// .carousel-fade, .carousel-control {
+//   z-index: 2;
+// }
+
+
+// WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+// now override the 3.3 new styles for modern browsers & apply opacity
+
+// @media all and (transform-3d), (-webkit-transform-3d) {
+//     .carousel-fade .carousel-inner > .item.next,
+//     .carousel-fade .carousel-inner > .item.active.right {
+//       opacity: 0;
+//       -webkit-transform: translate3d(0, 0, 0);
+//               transform: translate3d(0, 0, 0);
+//     }
+//     .carousel-fade .carousel-inner > .item.prev,
+//     .carousel-fade .carousel-inner > .item.active.left {
+//       opacity: 0;
+//       -webkit-transform: translate3d(0, 0, 0);
+//               transform: translate3d(0, 0, 0);
+//     }
+//     .carousel-fade .carousel-inner > .item.next.left,
+//     .carousel-fade .carousel-inner > .item.prev.right,
+//     .carousel-fade .carousel-inner > .item.active {
+//       opacity: 1;
+//       -webkit-transform: translate3d(0, 0, 0);
+//               transform: translate3d(0, 0, 0);
+//     }
+// }
+
+
+

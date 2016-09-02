@@ -83,10 +83,13 @@ body{
 
 }
 @media only screen and (max-width: 768px){
-  .social-icon, .service-dropdown{
+  .social-icon, .service-dropdown, .text-caption{
     display: none !important;
   
   }
+  // .hidden-on-small{
+  //   opacity: 0 !important;
+  // }
 }
 
 //Media Query Ends here >>
@@ -202,10 +205,16 @@ body{
   }
   .text-caption{
     position: absolute;
+    float: left;
+    left: 50px;
     top: 120px;
 
     .jumbotron{
       background: transparent;
+      float: left;
+      left: 50px;
+      text-align: left !important;
+      width: 400px;
     }
   }
 }

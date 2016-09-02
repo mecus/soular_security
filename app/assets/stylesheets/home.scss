@@ -3,37 +3,83 @@
 .w3-hidden{display: none;}
 .w3-tag-line{color: $soular-black; font-weight: 800; text-transform: uppercase;}
 
-section.container{
-    margin-top: 50px;
+.quote-container{
+    position: absolute;
+    top: 140px;
+    float: right;
+    right: 0px;
+    width: 400px;
+    transition: 1s;
+    -webkit-transition: 1s;
+    height: 603px;
+    background-color: rgba(0,0,0, 0.5);
+    h2{color: #fff; padding: 0 20px; text-align: center;}
+    .quote-wrapper{
+        padding: 0 20px;
+        p{color: #fff; text-align: center;}
+        label{color: #fff;}
+        input{background-color: transparent;
+            border: 1px solid;
+            border-color: green;
+            &:focus{background-color: lightgay; border-color: red;}
+        }
+    }
+    .cname{
+        padding: 0 5px;
+    }
+}
+@media only screen and (max-width: 568px){
+    .quote-container{width: 320px;
+        transition-timing-function: ease-in-out; 
+        -webkit-transition-timing-function: ease-in-out;
+    }
+    
+}
+section.container-content{
+    position: relative;
+    top: -20px;
+    background-color: $soular-black;
+    text-align: center !important;
+    margin: 0px;
+    padding-bottom: 50px;
     h1{
-      text-align: center;;
+      text-align: center;
+      color: #fff;
+      padding: 30px 0px;
+
     }
 }
 #why-soular {
+    // background-color: $soular-black;
     display: flex;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 50px;
     #power1, #power2, #power3 {
         // background-color: lightcyan;
-        height: auto;
-        margin: 0 20px;
-        text-align: center;
+        // width: 100px;
+        // height: 100px;
+        margin: 0 10px;
+        text-align: center !important;
+        // border: 2px solid;
         // border-radius: 50%;
         h4{
             font-size: 16px;
+            color: #fff;
         }
         p{opacity: 0; -webkit-transition: 1s; transition: 1s;}
     }
     i{
-        font-size: 50px; 
-
-        padding: 50px 0px 0px;
+        font-size: 50px;
+        border: 2px solid;
+        border-color: $soular-red; 
+        border-radius: 50%;
+        padding: 50px;
         color: $secondary-color;
 
     }
-    #power1:hover{p{opacity: 1; color: green; cursor: pointer; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out;}}
-    #power2:hover{p{opacity: 1; color: green; cursor: pointer; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out;}}
-    #power3:hover{p{opacity: 1; color: green; cursor: pointer; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out;}}
+    // #power1:hover{p{opacity: 1; color: green; cursor: pointer; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out;}}
+    // #power2:hover{p{opacity: 1; color: green; cursor: pointer; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out;}}
+    // #power3:hover{p{opacity: 1; color: green; cursor: pointer; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out;}}
 
 
 }
@@ -98,11 +144,17 @@ section.container{
 //why soular ends here
 
 .tagLine{
-    margin: 50 auto;
+    margin: 0 auto;
     text-align: center;
+    p{
+        font-size: 12px !important;
+        letter-spacing: 1px;
+        padding: 20px 100px;
+    }
     .tag-text{
-      margin-top: 50px;
-      color: $other-color;
+      margin-top: 0px;
+      color: #fff;
+
     }
     .btn{
         background: transparent;
@@ -112,7 +164,9 @@ section.container{
     }
 }
 .callToAction{
-    margin: 50px auto;
+    position: relative;
+    top: -20px;
+    margin: 0px auto;
     background-color: $soular-red;
     #cTa-text{
         text-align: center;
@@ -134,6 +188,7 @@ section.container{
     //  .btn{background-color: #000; color: #fff;}
 }
 section#service-collection{
+    h1{text-align: center;}
     margin-top: 50px;
     .service-card-left{
       margin-right: 0px;
@@ -161,6 +216,7 @@ section#service-collection{
             }
 
           .img-card{
+            a{text-decoration: none; &:hover{color: $soular-red;}}
             h5{padding: 0 10px; color: lightgrey; font-weight: 600;}
             
           }
@@ -232,7 +288,10 @@ section#service-collection{
         }
     }  
 }
-
+section.news-container{
+    margin-top: 50px;
+    h1{text-align: center;}
+}
 
 
 @media only screen and (max-width: 1600px){
@@ -313,6 +372,7 @@ section#service-collection{
                     .carousel-captions{
                         p{
                             padding: 5px 20px;
+                            font-size: 12px;
                         }
                     }
                 }

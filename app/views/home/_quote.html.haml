@@ -1,0 +1,24 @@
+.quote-wrapper
+	%h2 Get Free Quote
+	%p Fill the form below and get a free quote
+	%form
+		.w3-col.s6.cname
+			.form-group
+				%label{:for => "firstName"} First Name
+				%input#firstName.form-control{:placeholder => "First Name", :type=> "name"}
+		.w3-col.s6.cname
+			.form-group
+				%label{:for => "lastNmae"} Last Name
+				%input#lastName.form-control{:placeholder => "Last Name", :type=> "name"}
+		.form-group
+			%label{:for => "companyNmae"} Company Name
+			%input#companyName.form-control{:placeholder => "Company Name", :type=> "name"}
+		.form-group
+			%label{:for => "exampleInputEmail1"} Email address
+			%input#exampleInputEmail1.form-control{:placeholder => "Email", :type => "email"}
+		.form-group
+			%label{:for => "phoneNumber"} Telephone
+			%input#phoneNumber.form-control{:placeholder => "Telephone", :type => "email"}
+
+		%button.btn.btn-default{:type => "submit"} Submit
+						

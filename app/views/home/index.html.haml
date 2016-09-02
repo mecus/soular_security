@@ -1,10 +1,11 @@
 = render "partials/navigation"
 = render "home_slider"
+.quote-container
+	= render "quote"
 
-
-%section.container
+%section.container-content
 	%h1.w3-tag-line.w3-roboto Who we are
-	#why-soular.w3-row
+	#why-soular.w3-row.container
 		#power1.w3-col.s4
 			%span 
 				%i.glyphicon.glyphicon-refresh{"aria-hidden" => "true"}
@@ -46,26 +47,28 @@
 					.img-card
 						%a{:href=>"/services"}
 							%img.w3-hover-opacity{:alt => "Security", :src => "/assets/our-protect.jpg", :style => "width: 100%"}
-						%h5.w3-allerta Security Services
+						%h5.w3-allerta
+							%a{:href => "/services"} Security Services
 						
 					%p
 						%span we offer an array of security service ranging from public and private in… 
 						
-					.linkButtons-left.w3-center
-						%button.btn.btn-success
-							%a{:href => "/services"} see more
+					/ .linkButtons-left.w3-center
+					/ 	%button.btn.btn-success
+					/ 		%a{:href => "/services"} see more
 			.col-xs-6.col-sm-6.col-md-6.col-lg-6.home-service-card-col
 				.home-service-card
 					.img-card
 						%a{:href=>"#"}
-							%img.w3-hover-opacity{:alt => "Recruitment", :src => "/assets/security-radio.jpg", :style => "width: 100%"}
-						%h5.w3-allerta Security Gadgets
+							%img.w3-hover-opacity{:alt => "Recruitment", :src => "/assets/gadgets.jpg", :style => "width: 100%"}
+						%h5.w3-allerta
+							%a{:href => "/shop"} Security Gadgets
 						
 					%p
 						%span We supply security gadgets for our clients and provive installation of security devises
 						
-					.linkButtons-right.w3-center
-						%button.btn.btn-success{:type => "button"} shop
+					/ .linkButtons-right.w3-center
+					/ 	%a{:href => "/shop"} shop
 		.col-xs-12.col-sm-12.col-md-6.col-lg-6.service-card-right.home-service-card-col
 			/ Showing the right hand service images
 			.card-wrap.w3-display-container

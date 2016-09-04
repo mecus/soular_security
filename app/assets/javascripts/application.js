@@ -13,7 +13,6 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
 // $('.carousel').carousel({
@@ -34,3 +33,36 @@
 //     x[myIndex-1].style.display = "block";
 //     setTimeout(carousel, 2000); // Change image every 5 seconds
 // }
+
+var ready;
+ready = function() {
+	$(".main-navbar").hide();
+
+	$(".s-menu").click(function(){
+		$(".main-navbar").show();	
+		$(".quote-wrapper").hide();
+		$("li.s-close").css({'display': 'block' });
+		$(this).css({'display': 'none' });
+
+
+	});
+
+	$(".s-close").click(function(){
+		$(".main-navbar").hide();	
+		$(".quote-wrapper").show();
+		$(this).css({'display': 'none', '-webkit-transition-timing-function': 'ease-in-out', 'transition-timing-function': 'ease-in-out' });
+		$(".s-menu").css({'display': 'block', '-webkit-transition-timing-function': 'ease-in-out', 'transition-timing-function': 'ease-in-out' });
+		
+	});
+
+	$("li.dropdown-hover").hover(function(){
+		$(".service-dropdown").css({'display': 'block'});
+	});
+
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
+
+
+

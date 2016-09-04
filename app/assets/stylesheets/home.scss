@@ -3,38 +3,7 @@
 .w3-hidden{display: none;}
 .w3-tag-line{color: $soular-black; font-weight: 800; text-transform: uppercase;}
 
-.quote-container{
-    position: absolute;
-    top: 140px;
-    float: right;
-    right: 0px;
-    width: 400px;
-    transition: 1s;
-    -webkit-transition: 1s;
-    height: 603px;
-    background-color: rgba(0,0,0, 0.5);
-    h2{color: #fff; padding: 0 20px; text-align: center;}
-    .quote-wrapper{
-        padding: 0 20px;
-        p{color: #fff; text-align: center;}
-        label{color: #fff;}
-        input{background-color: transparent;
-            border: 1px solid;
-            border-color: green;
-            &:focus{background-color: lightgay; border-color: red;}
-        }
-    }
-    .cname{
-        padding: 0 5px;
-    }
-}
-@media only screen and (max-width: 568px){
-    .quote-container{width: 320px;
-        transition-timing-function: ease-in-out; 
-        -webkit-transition-timing-function: ease-in-out;
-    }
-    
-}
+
 section.container-content{
     position: relative;
     top: -20px;
@@ -74,7 +43,7 @@ section.container-content{
         border-color: $soular-red; 
         border-radius: 50%;
         padding: 50px;
-        color: $secondary-color;
+        color: #fff;
 
     }
     // #power1:hover{p{opacity: 1; color: green; cursor: pointer; transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out;}}
@@ -149,7 +118,9 @@ section.container-content{
     p{
         font-size: 12px !important;
         letter-spacing: 1px;
-        padding: 20px 100px;
+        padding: 20px 20px;
+        line-height: 25px;
+        opacity: 0.8;
     }
     .tag-text{
       margin-top: 0px;
@@ -186,6 +157,12 @@ section.container-content{
     ul>li{color: grey; display: inline-flex; }
      }
     //  .btn{background-color: #000; color: #fff;}
+}
+.home-service{
+    position: relative;
+    top: -20px;
+    margin: 0px;
+    padding: 0px;
 }
 section#service-collection{
     h1{text-align: center;}

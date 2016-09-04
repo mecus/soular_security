@@ -1,11 +1,12 @@
-= render "partials/navigation"
+= render "partials/main_nav"
 = render "home_slider"
 .quote-container
 	= render "quote"
+	= render "home_menu"
 
 %section.container-content
-	%h1.w3-tag-line.w3-roboto Who we are
-	#why-soular.w3-row.container
+	%h1.w3-tag-line.w3-roboto.w3-animate-zoom Who we are
+	#why-soular.w3-row.container.w3-animate-bottom
 		#power1.w3-col.s4
 			%span 
 				%i.glyphicon.glyphicon-refresh{"aria-hidden" => "true"}
@@ -36,45 +37,76 @@
 		%p{:style => "color: #fff;"} If you have any security concerns or issues regarding your business, property, assets, valuables or VIP’s then Soular Security is the choice for you.
 		%a{:href=>"/services"}
 			%button.btn.btn-success{:type => "input"} read more
+= render "partials/what_we_do"			
 %section#service-collection.container
+	/ = render "partials/what_we_do"
 	.row
-		%h1.w3-tag-line.w3-roboto What we do
-		.col-xs-12.col-sm-12.col-md-6.col-lg-6.service-card-left.home-service-card-col
-			/ Showing the left service card
+		/ %h1.w3-tag-line.w3-roboto What we do
+		/ .col-xs-12.col-sm-12.col-md-6.col-lg-6.service-card-left.home-service-card-col
+		/ Showing the left service card
 			
-			.col-xs-6.col-sm-6.col-md-6.col-lg-6.home-service-card-col
-				.home-service-card
-					.img-card
-						%a{:href=>"/services"}
-							%img.w3-hover-opacity{:alt => "Security", :src => "/assets/our-protect.jpg", :style => "width: 100%"}
-						%h5.w3-allerta
-							%a{:href => "/services"} Security Services
-						
-					%p
-						%span we offer an array of security service ranging from public and private in… 
-						
-					/ .linkButtons-left.w3-center
-					/ 	%button.btn.btn-success
-					/ 		%a{:href => "/services"} see more
-			.col-xs-6.col-sm-6.col-md-6.col-lg-6.home-service-card-col
-				.home-service-card
-					.img-card
-						%a{:href=>"#"}
-							%img.w3-hover-opacity{:alt => "Recruitment", :src => "/assets/gadgets.jpg", :style => "width: 100%"}
-						%h5.w3-allerta
-							%a{:href => "/shop"} Security Gadgets
-						
-					%p
-						%span We supply security gadgets for our clients and provive installation of security devises
-						
-					/ .linkButtons-right.w3-center
-					/ 	%a{:href => "/shop"} shop
-		.col-xs-12.col-sm-12.col-md-6.col-lg-6.service-card-right.home-service-card-col
-			/ Showing the right hand service images
-			.card-wrap.w3-display-container
-				.w3-display-middle.w3-large.w3-hidden.w3-padding-48
-					%h2.w3-animate-zoom{:style=>"color:#fff;"} At Soular you are assured a world of opportunities 
-					%span.btn.btn-danger.w3-animate-left see more
+		.col-xs-6.col-sm-6.col-md-3.col-lg-3.home-service-card-col
+			.home-service-card
+				.img-card
+					%a{:href=>"/services"}
+						%img.w3-hover-opacity{:alt => "Security", :src => "/assets/our-protect.jpg", :style => "width: 100%"}
+					%h5.w3-allerta
+						%a{:href => "/services"} Security Services
+					
+				%p
+					%span we offer an array of security service ranging from public and private in… 
+					
+				/ .linkButtons-left.w3-center
+				/ 	%button.btn.btn-success
+				/ 		%a{:href => "/services"} see more
+		.col-xs-6.col-sm-6.col-md-3.col-lg-3.home-service-card-col
+			.home-service-card
+				.img-card
+					%a{:href=>"#"}
+						%img.w3-hover-opacity{:alt => "Recruitment", :src => "/assets/gadgets.jpg", :style => "width: 100%"}
+					%h5.w3-allerta
+						%a{:href => "/shop"} Security Gadgets
+					
+				%p
+					%span We supply security gadgets for our clients and provive installation of security devises
+					
+				/ .linkButtons-right.w3-center
+				/ 	%a{:href => "/shop"} shop
+
+		.col-xs-6.col-sm-6.col-md-3.col-lg-3.home-service-card-col
+			.home-service-card
+				.img-card
+					%a{:href=>"/services"}
+						%img.w3-hover-opacity{:alt => "Security", :src => "/assets/our-protect.jpg", :style => "width: 100%"}
+					%h5.w3-allerta
+						%a{:href => "/services"} Security Services
+					
+				%p
+					%span we offer an array of security service ranging from public and private in… 
+					
+				/ .linkButtons-left.w3-center
+				/ 	%button.btn.btn-success
+				/ 		%a{:href => "/services"} see more
+		.col-xs-6.col-sm-6.col-md-3.col-lg-3.home-service-card-col
+			.home-service-card
+				.img-card
+					%a{:href=>"#"}
+						%img.w3-hover-opacity{:alt => "Recruitment", :src => "/assets/gadgets.jpg", :style => "width: 100%"}
+					%h5.w3-allerta
+						%a{:href => "/shop"} Security Gadgets
+					
+				%p
+					%span We supply security gadgets for our clients and provive installation of security devises
+					
+				/ .linkButtons-right.w3-center
+				/ 	%a{:href => "/shop"} shop
+
+		/ .col-xs-12.col-sm-12.col-md-6.col-lg-6.service-card-right.home-service-card-col
+		/ 	/ Showing the right hand service images
+		/ 	.card-wrap.w3-display-container
+		/ 		.w3-display-middle.w3-large.w3-hidden.w3-padding-48
+		/ 			%h2.w3-animate-zoom{:style=>"color:#fff;"} At Soular you are assured a world of opportunities 
+		/ 			%span.btn.btn-danger.w3-animate-left see more
 					
 / = render "partials/contact_section"
 %section.news-container.container

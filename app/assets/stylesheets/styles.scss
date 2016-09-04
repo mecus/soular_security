@@ -45,6 +45,7 @@ body{
       -webkit-transition-timing-function: ease-in-out;
     }
   }
+ 
   //Home Slider Media query Ends here
 
   .header-wrapper{
@@ -94,23 +95,9 @@ body{
 
 //Media Query Ends here >>
 
-.service-dropdown{
-  background-color: $soular-red !important;
-  a{color: #fff; font-size: 12px !important;
-    padding-left: 10px !important;
-    transition: 2s;
-    -webkit-transition: 2s;
-    &:hover{
-      background: none !important; color: grey !important; opacity: 0.5; 
-      transition-timing-function: ease-in-out; 
-      -webkit-transition-timing-function: ease-in-out;
-    }
-  }
-  .slist{
-    border-right: 1px solid;
-    border-color: #9d9d9d !important;
-  }
-}
+
+
+
 .navbar-brand{
   position: absolute;
   top: 20px;
@@ -174,6 +161,9 @@ body{
     }
   }
 }
+
+
+
 .scroll-cavet{
   position: absolute;
   top: 700px;
@@ -190,12 +180,12 @@ body{
   background-color: black;
   position: relative;
   margin: 0 auto;
-  height: 600px;
+  height: 700px;
   width: 100%;
   overflow: hidden;
   img{
     position: relative;
-    top: -50px;
+    top: 0px;
     width: 100%;
     min-width: 1200px;
     min-height: 700px;
@@ -206,15 +196,14 @@ body{
   .text-caption{
     position: absolute;
     float: left;
-    left: 50px;
-    top: 120px;
+    top: 300px;
+    left: 250px;
 
     .jumbotron{
       background: transparent;
       float: left;
-      left: 50px;
       text-align: left !important;
-      width: 400px;
+      width: 600px;
     }
   }
 }

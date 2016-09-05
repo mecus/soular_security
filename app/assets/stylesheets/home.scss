@@ -53,34 +53,38 @@ section.container-content{
 
 }
 
-//  @media only screen and (max-width: 768px){
-//     #why-soular {
-//         display: flex;
-//         margin: 0 auto;
-//         padding: 0 20px;
-//         #power1, #power2, #power3 {
-//             background-color: lightcyan;
-//             height: 150px;
-//             width: 150px;
-//             margin: 0 auto;
-//             text-align: center;
-//             border: 2px solid;
-//             border-color: dimgray;
-//             border-radius: 50%;
-//             transition: 1s;
-//             h4{
-//                 font-size: 14px;
-//             }
-//         }
-//         i{
-//             font-size: 50px; 
+@media only screen and (max-width: 768px){
+    #why-soular {
+        display: flex;
+        margin: 0 auto;
+        padding: 0 20px;
+        text-align: center !important;
+        #power1, #power2, #power3 {
+        // background-color: lightcyan;
+        // width: 100px;
+        // height: 100px;
+        margin: 0 10px;
+        text-align: center !important;
+        // border: 2px solid;
+        // border-radius: 50%;
+        h4{
+            font-size: 16px;
+            color: #fff;
+        }
+        p{opacity: 0; -webkit-transition: 1s; transition: 1s;}
+        }
+        i{
+            font-size: 40px;
+            border: 1px solid;
+            border-color: $soular-red; 
+            border-radius: 50%;
+            padding: 20px;
+            color: #fff;
 
-//             padding: 30px 0px 0px;
-//             color: red;
-//         }
+        }
 
-// }
-// }
+    }
+}
 // @media only screen and (max-width: 568px){
 //     #why-soular {
 //         display: flex;
@@ -108,7 +112,7 @@ section.container-content{
 //             color: #011627;
 //         }
 
-// }
+//     }
 // }
 //why soular ends here
 

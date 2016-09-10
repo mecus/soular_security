@@ -15,6 +15,11 @@ body{
   z-index: 1009;
   color: #fff;
 }
+@media only screen and (max-width: 568px){
+  .flash-notice{
+    display: none;
+  }
+}
 
 // All Media Query start here >>
 @media only screen and (min-width: 768px){
@@ -221,7 +226,7 @@ body{
     position: absolute;
     float: left;
     top: 250px;
-    left: 250px;
+    left: 130px;
 
     .jumbotron{
       background: transparent;

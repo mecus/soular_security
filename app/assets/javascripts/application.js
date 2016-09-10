@@ -38,7 +38,7 @@ var ready;
 ready = function() {
 	$(".main-navbar").hide();
 
-	$(".s-menu").click(function(){
+	$("li.s-menu").click(function(){
 		$(".main-navbar").show();	
 		$(".quote-wrapper").hide();
 		$("li.s-close").css({'display': 'block' });
@@ -47,11 +47,11 @@ ready = function() {
 
 	});
 
-	$(".s-close").click(function(){
+	$("li.s-close").click(function(){
 		$(".main-navbar").hide();	
 		$(".quote-wrapper").show();
 		$(this).css({'display': 'none', '-webkit-transition-timing-function': 'ease-in-out', 'transition-timing-function': 'ease-in-out' });
-		$(".s-menu").css({'display': 'block', '-webkit-transition-timing-function': 'ease-in-out', 'transition-timing-function': 'ease-in-out' });
+		$("li.s-menu").css({'display': 'block', '-webkit-transition-timing-function': 'ease-in-out', 'transition-timing-function': 'ease-in-out' });
 		
 	});
 

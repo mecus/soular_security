@@ -4,23 +4,25 @@
 .quote-container
 	= render "quote"
 	= render "home_menu"
-
+.scroll-cavet
+	%a{:href=>"#"}
+		%i.glyphicon.glyphicon-menu-down
 %section.container-content
 	%h1.w3-tag-line.w3-roboto.w3-animate-zoom Who we are
 	#why-soular.w3-row.container.w3-animate-bottom
 		#power1.w3-col.s4
 			%span 
-				%i.glyphicon.glyphicon-refresh.z-depth-1{"aria-hidden" => "true"}
+				%i.glyphicon.glyphicon-refresh{"aria-hidden" => "true"}
 			%h4.w3-allerta Strong Protection
 			%p We are strong to the core
 		#power2.w3-col.s4
 			%span
-				%i.glyphicon.glyphicon-ok.z-depth-1{"aria-hidden" => "true"}
+				%i.glyphicon.glyphicon-ok{"aria-hidden" => "true"}
 			%h4.w3-allerta Excellent Service
 			%p Our service is no. one
 		#power3.w3-col.s4
 			%span
-				%i.glyphicon.glyphicon-user.z-depth-1{"aria-hidden" => "true"}
+				%i.glyphicon.glyphicon-user{"aria-hidden" => "true"}
 			%h4.w3-allerta Computent
 			%p We take all our clients serious
 	.tagLine.container
@@ -30,89 +32,74 @@
 		%a.btn.btn-primary{:href=>"/about"} more
 %section.callToAction
 	#cTa-text.container.w3-center
-		%h1.w3-allerta All kind of Security Services
-		%ul
-			%li Corporate security
-			%li Events
-			%li Private Party
-		%p{:style => "color: #fff;"} If you have any security concerns or issues regarding your business, property, assets, valuables or VIP’s then Soular Security is the choice for you.
-		%a{:href=>"/services"}
-			%button.btn.btn-success{:type => "input"} read more
-= render "partials/what_we_do"			
+		%h1.w3-allerta Soular Limited is a successful and growing security company
+		%h3{:style => "color: #fff;"} Serving Public and Private Sectors
+		%p{:style => "color: #fff;"} We always have vacancies for enthusiastic, talented and loyal people to fill roles within our team.
+		%a{:href=>"/career"}
+			%button.btn.btn-success{:type => "input"} Apply for job
+= render "partials/what_we_do"
+.w3-row.sia-approve
+	.container
+		.w3-col.s4.sia-img
+			%img{:src=>"assets/sia-contractor.png", :alt=>"SIA"}
+		.w3-col.s8.sia-text
+			%p Soular Limited holds SIA approved contractor status for the provision of Security Guarding services. We provide quality security services to a wide range of organisations, both public and private companies throughout the UK.	
+
 %section#service-collection.container
-	/ = render "partials/what_we_do"
-	.row
-		/ %h1.w3-tag-line.w3-roboto What we do
-		/ .col-xs-12.col-sm-12.col-md-6.col-lg-6.service-card-left.home-service-card-col
-		/ Showing the left service card
-			
-		.col-xs-6.col-sm-6.col-md-3.col-lg-3.home-service-card-col
-			.home-service-card
-				.img-card
-					%a{:href=>"/services"}
-						%img.w3-hover-opacity{:alt => "Security", :src => "/assets/our-protect.jpg", :style => "width: 100%"}
-					%h5.w3-allerta
-						%a{:href => "/services"} Security Services
-					
-				%p
-					%span we offer an array of security service ranging from public and private in… 
-					
-				/ .linkButtons-left.w3-center
-				/ 	%button.btn.btn-success
-				/ 		%a{:href => "/services"} see more
+	.row	
 		.col-xs-6.col-sm-6.col-md-3.col-lg-3.home-service-card-col
 			.home-service-card
 				.img-card
 					%a{:href=>"#"}
-						%img.w3-hover-opacity{:alt => "Recruitment", :src => "/assets/gadgets.jpg", :style => "width: 100%"}
-					%h5.w3-allerta
-						%a{:href => "/shop"} Security Gadgets
-					
-				%p
-					%span We supply security gadgets for our clients and provive installation of security devises
-					
-				/ .linkButtons-right.w3-center
-				/ 	%a{:href => "/shop"} shop
-
-		.col-xs-6.col-sm-6.col-md-3.col-lg-3.home-service-card-col
-			.home-service-card
-				.img-card
-					%a{:href=>"/services"}
 						%img.w3-hover-opacity{:alt => "Security", :src => "/assets/our-protect.jpg", :style => "width: 100%"}
-					%h5.w3-allerta
-						%a{:href => "/services"} Security Services
+					%h5
+						%a{:href => "/services"} Security Guards
 					
-				%p
-					%span we offer an array of security service ranging from public and private in… 
+					%p Understanding security treat and needs of our clients.
 					
-				/ .linkButtons-left.w3-center
-				/ 	%button.btn.btn-success
-				/ 		%a{:href => "/services"} see more
+				.linkButtons.w3-center
+					%a{:href => "#"}  more
 		.col-xs-6.col-sm-6.col-md-3.col-lg-3.home-service-card-col
 			.home-service-card
 				.img-card
 					%a{:href=>"#"}
-						%img.w3-hover-opacity{:alt => "Recruitment", :src => "/assets/gadgets.jpg", :style => "width: 100%"}
-					%h5.w3-allerta
-						%a{:href => "/shop"} Security Gadgets
+						%img.w3-hover-opacity{:alt => "Construction-sector", :src => "/assets/Construction-sector.jpg", :style => "width: 100%"}
+					%h5
+						%a{:href => "/shop"} Construction
 					
-				%p
-					%span We supply security gadgets for our clients and provive installation of security devises
+					%p Ensuring your grounds are well protected and safer for the workforce
 					
-				/ .linkButtons-right.w3-center
-				/ 	%a{:href => "/shop"} shop
+				.linkButtons.w3-center
+					%a{:href => "#"}  more
 
-		/ .col-xs-12.col-sm-12.col-md-6.col-lg-6.service-card-right.home-service-card-col
-		/ 	/ Showing the right hand service images
-		/ 	.card-wrap.w3-display-container
-		/ 		.w3-display-middle.w3-large.w3-hidden.w3-padding-48
-		/ 			%h2.w3-animate-zoom{:style=>"color:#fff;"} At Soular you are assured a world of opportunities 
-		/ 			%span.btn.btn-danger.w3-animate-left see more
+		.col-xs-6.col-sm-6.col-md-3.col-lg-3.home-service-card-col
+			.home-service-card
+				.img-card
+					%a{:href=>"#"}
+						%img.w3-hover-opacity{:alt => "Security", :src => "/assets/public-sector.jpg", :style => "width: 100%"}
+					%h5
+						%a{:href => "#"} Public Sector Security
 					
-/ = render "partials/contact_section"
-%section.news-container.container
-	%h1.w3-tag-line.w3-roboto Latest News
-	= render "partials/news"
+					%p we offer an array of security service ranging from public and private in… 
+					
+				.linkButtons.w3-center
+					%a{:href => "#"}  more
+		.col-xs-6.col-sm-6.col-md-3.col-lg-3.home-service-card-col
+			.home-service-card
+				.img-card
+					%a{:href=>"#"}
+						%img.w3-hover-opacity{:alt => "Corporate-Sector", :src => "/assets/Corporate-Sector.jpg", :style => "width: 100%"}
+					%h5
+						%a{:href => "#"} Corporate Security
+					
+					%p Simply the best and highly professional staff for your business.
+					
+				.linkButtons.w3-center
+					%a{:href => "#"} more
+
+%section.news-container
+	%h1.w3-tag-line.w3-roboto Shop
+	= render "partials/shop"
 
 %section.testimony-container
 	#testimony-container

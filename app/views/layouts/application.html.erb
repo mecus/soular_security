@@ -13,7 +13,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
+  <div class="flash-notice">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  </div>
 	<%= yield %>
 </body>
 </html>

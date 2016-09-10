@@ -1,5 +1,16 @@
 Rails.application.routes.draw do
 
+
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+
+  }
+  devise_scope :user do
+    get 'login', to: 'users/sessions#new'
+    get 'register', to: 'users/registrations#new'
+  end
+
   resources :posts
   get 'about' => 'home#about'
   get 'contact' => 'home#contact'

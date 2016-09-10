@@ -7,8 +7,17 @@
     position: relative;
     z-index: -1;
     text-align: center;
-    .about-image{background-image: url('security-2.jpg')}
-    .contact-image{background-image: url('service_header.jpg')}
+    .about-image{
+        // background-image: url('soular-office'); background-repeat: no-repeat; width: 100%;
+        img{
+            min-width: 100%;
+            background-repeat: no-repeat;
+            min-height: 500px;
+        }
+    }
+    .contact-image{
+        background-image: url('service_header.jpg');
+    }
     .page-header{
         background-color: aquamarine;
         margin: 0 auto;
@@ -21,7 +30,7 @@
         top: -50px;
         display: block;
         .page-header-image-cover{
-            background-color: $soular_red;
+            // background-color: $soular_red;
             height: 500px;
             width: 100%;
             opacity: 0.7;
@@ -44,3 +53,11 @@
 
     }
 }
+.about-us{
+    p{text-align: left;}
+}
+.home-form{
+    h1{text-align: center; margin-bottom: 50px;}
+    margin-bottom: 100px;
+}
+

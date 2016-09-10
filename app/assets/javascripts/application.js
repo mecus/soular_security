@@ -55,9 +55,9 @@ ready = function() {
 		
 	});
 
-	$("li.dropdown-hover").hover(function(){
-		$(".service-dropdown").css({'display': 'block'});
-	});
+	// $("li.dropdown-2").hover(function(){
+	// 	$(".service-dropdown-2").css({'display': 'block'});
+	// });
 
 };
 

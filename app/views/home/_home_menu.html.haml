@@ -1,14 +1,17 @@
 %ul.main-navbar.w3-animate-right
   .menu-head
     .login
-      %h4 Login
+      - if !user_signed_in?
+        %h4= link_to "Login", new_user_session_path
+      - else
+        %h4= link_to "logout", destroy_user_session_path, method: :delete
     .logout
       %h4 Call 020 3119 1019
 
   %li
     %a{:href => "/"}
       Home
-  %li.dropdown-hover
+  %li.dropdown-2
     %a{:href => "services"}
       What we do
       / %i.glyphicon.glyphicon-triangle-bottom{:style=>"color: #c1001d;"}
@@ -24,7 +27,7 @@
     %a{:href => "blog"} Blog
 
 
-%div.service-dropdown
+%div.service-dropdown-2
   %div.w3-half.slist
     %li
       %a{:href => "/security_guard"} Security Guard

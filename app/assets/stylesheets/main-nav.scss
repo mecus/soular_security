@@ -56,20 +56,21 @@
   transition: 2s;
   -webkit-transition: 2s;
   .facebook{
-    background-color: red;
+    background-color: #1B98E0;
   }
   .twitter{
-    background-color: blue;
+    background-color: #06AED5;
   }
   .linkedin{
-    background-color: black;
+    background-color: #083D77;
   }
   .googleplus{
-    background-color: grey;
+    background-color: #dd4b39;
   }
 
   i{
     font-size: 30px;
+    color: #fff;
   }
   .facebook, .twitter, .linkedin, .googleplus{
     transition: 2s;
@@ -81,8 +82,36 @@
     }
   }
 }
-
 .service-dropdown{
+  display: none;
+  width: 300px;
+  position: absolute;
+  // top: 180px;
+
+  background-color: $soular-red !important;
+  a{color: #fff; font-size: 12px !important;
+    text-decoration: none !important;
+    padding-left: 10px !important;
+    transition: 2s;
+    -webkit-transition: 2s;
+    &:hover{
+      background: none !important; color: grey !important;
+      transition-timing-function: ease-in-out; 
+      -webkit-transition-timing-function: ease-in-out;
+    }
+  }
+  li{
+    text-decoration: none !important;
+    padding: 5px 10px;
+  }
+  .slist{
+    border-right: 1px solid;
+    border-color: #9d9d9d !important;
+  }
+
+}
+
+.service-dropdown-2{
   display: none;
   width: 300px;
   position: absolute;
@@ -147,11 +176,20 @@
     padding: 10px 0px;
     text-align: right;
     h4{padding: 20px !important; margin: 0px !important;}
-    .login{border-right: 2px solid;}
+    .login{
+      border-right: 2px solid;
+      a{color: black; &:hover{color: #fff;}}
+    }
   }
 }
 //Home menu ends here
-
+.user-session{
+  position: absolute;
+  top: 10px;
+  right: 600px;
+  z-index: 1009;
+  p{color: #fff; padding: 0px; margin: 0px; font-size: 10px;}
+}
 
 .quote-container{
     position: absolute;
@@ -183,6 +221,43 @@
 //     display: none;
 //   }
 // }
+@media only screen and (max-width: 768px){
+  .main-nav{
+    .navbar-main{
+
+      background: $soular-black;
+      border-radius: 0px;
+      margin-bottom: 0px;
+      .navbar-header{
+        li, a{
+          padding: 10px;
+          color: $soular-red;
+          &:hover{color: #fff;}
+        }
+        li.s-menu{
+          transition: 2s;
+          -webkit-transition: 2s;
+        }
+        li.s-close{
+          display: none;
+          transition: 2s;
+          -webkit-transition: 2s;
+        }
+        li.s-home{
+          display: none;
+        }
+      }
+    }
+  }
+  .soular-logo{
+
+    margin: 0px 0px;
+    left: 20px;
+    top: 10px;
+    text-align: left !important;
+  }
+
+}
 @media only screen and (max-width: 568px){
   .quote-container{width: 100%;
     top: 60px;
@@ -191,10 +266,11 @@
   }
 
   .soular-logo{
-    width: 100%;
+    width: 200px;
     display: flex;
     margin: 0px 0px;
-    top: 5px;
+    left: 10px;
+    top: 10px;
     text-align: left !important;
   }
   .mobile-nav{

@@ -8,6 +8,13 @@ body{
 .w3-ul li{
   list-style: none;
 }
+.flash-notice{
+  position: absolute;
+  top: 80px;
+  left: 140px;
+  z-index: 1009;
+  color: #fff;
+}
 
 // All Media Query start here >>
 @media only screen and (min-width: 768px){
@@ -166,14 +173,31 @@ body{
 
 .scroll-cavet{
   position: absolute;
-  top: 700px;
+  top: 600px;
   left: 50%;
   width: 40px;
+  z-index: 1002;
   margin-left: -20px;
-  i{color: #fff; font-size: 20px;}
+  text-align: center;
+  i{color: $soular-red; font-size: 30px;}
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  &:hover{top: 710px; -webkit-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out;}
+  &:hover{top: 610px; -webkit-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out;}
+}
+@media only screen and (max-width: 578px){
+  .scroll-cavet{
+    position: absolute;
+    top: 670px;
+    left: 50%;
+    width: 40px;
+    z-index: 1002;
+    margin-left: -20px;
+    text-align: center;
+    i{color: $soular-red; font-size: 30px;}
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    &:hover{top: 680px; -webkit-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out;}
+  }
 }
 //Home slider styling
 .slide-wrapper{
@@ -196,7 +220,7 @@ body{
   .text-caption{
     position: absolute;
     float: left;
-    top: 300px;
+    top: 250px;
     left: 250px;
 
     .jumbotron{
@@ -256,6 +280,46 @@ body{
     color: #fff;
     font-size: 3em;
   } h5{color: #fff; letter-spacing: 3px; line-height: 18px;}
+}
+.home-service{
+  .soular-sym-1, .soular-sym-2{
+    position: absolute;
+    // background-color: $soular-red;
+    width: 100px;
+    height: 100px;
+    z-index: 1001;
+  }
+  .soular-sym-1{
+    top: 220px;
+    right: 50%;
+    border-left: 30px solid;
+    border-top: 30px solid;
+    border-bottom: 30px solid;
+    border-color: $soular-red;
+    border-radius: 50% 0 0 50%;
+  }
+  .soular-sym-2{
+    top: 290px;
+    border-right: 30px solid;
+    border-top: 30px solid;
+    border-bottom: 30px solid;
+    border-color: $soular-red;
+    border-radius: 0 50% 50% 0;
+  }
+}
+.shop-front{
+  // background-color: $soular-red;
+  // padding-top: 50px;
+  .caption-title-1, .caption-title-2, .caption-title-3, .caption-title-4{
+    position: relative;
+    top: -30px;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px !important;
+    text-align: center !important;
+    h4{color: black;}
+    h6{color: grey;}
+  }
 }
 .footer-container{
   background-color: $soular-red;

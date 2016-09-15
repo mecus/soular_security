@@ -13,11 +13,26 @@ body{
   top: 80px;
   left: 140px;
   z-index: 1009;
-  color: #fff;
+  color: green;
 }
+.small-flash-notice{
+    display: none;
+    position: absolute;
+    top: -20px;
+    z-index: 1009;
+    color: green;
+  }
 @media only screen and (max-width: 568px){
   .flash-notice{
     display: none;
+  }
+  .small-flash-notice{
+    display: block;
+    position: absolute;
+    top: -20px;
+    z-index: 1009;
+    text-align: center;
+    p.notice, p.alert{color: green; text-align: center;}
   }
 }
 
@@ -227,6 +242,7 @@ body{
     float: left;
     top: 250px;
     left: 130px;
+    .btn{background: transparent;}
 
     .jumbotron{
       background: transparent;
@@ -375,6 +391,18 @@ body{
   }
   // background-color: $secondary-color;
   // height: 400px;
+}
+.link-top{
+  position: fixed;
+  top: 850px;
+  right: 20px;
+  z-index: 1010;
+  padding: 5px;
+  border: 1px solid;
+  border-color: $soular-red;
+  border-radius: 6px;
+  background-color: black;
+  i{font-size: 20px;}
 }
 .footer{
   height: 60px;

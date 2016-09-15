@@ -1,0 +1,11 @@
+= render "partials/navigation"
+
+.container
+	%h4= @quote.f_name
+	%h4= @quote.l_name
+	%h4= @quote.company
+	%h4= @quote.email
+	%h4= @quote.telephone
+	%h4= @quote.buz_size
+
+	= link_to "All Quotes", quotes_path

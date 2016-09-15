@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     get 'login', to: 'users/sessions#new'
     get 'register', to: 'users/registrations#new'
   end
-
+  resources :quotes
   resources :posts
   get 'about' => 'home#about'
   get 'contact' => 'home#contact'

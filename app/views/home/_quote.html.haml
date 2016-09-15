@@ -1,48 +1,26 @@
 .quote-wrapper
 	.w3-animate-right
+		.small-flash-notice
+			%p.notice= notice
+			%p.alert= alert
+
 		%h2 Get Free Quote
 		%p Fill the form below and get a free quote OR
 		%p Call 020 3119 1019
 		%br
-		%form
+		= simple_form_for @quote  do |f|
 			.w3-col.s6.cname
-				.form-group
-					%label{:for => "firstName"} First Name
-					%input#firstName.form-control{:placeholder => "First Name", :type=> "name"}
+				= f.input :f_name, placeholder: 'First Name', :label => "First Name"
 			.w3-col.s6.cname
-				.form-group
-					%label{:for => "lastName"} Last Name
-					%input#lastName.form-control{:placeholder => "Last Name", :type=> "name"}
-			.form-group
-				%label{:for => "companyName"} Company Name
-				%input#companyName.form-control{:placeholder => "Company Name", :type=> "name"}
-			.form-group
-				%label{:for => "exampleInputEmail1"} Email address
-				%input#exampleInputEmail1.form-control{:placeholder => "Email", :type => "email"}
-			.form-group
-				%label{:for => "phoneNumber"} Telephone
-				%input#phoneNumber.form-control{:placeholder => "Telephone", :type => "telephone"}
-			.form-group
-				/ %label{:for => "exampleInputFile"} File input
-				/ %input#exampleInputFile{:type => "file"}/
-				/ %p.help-block Please upload any file you want us to have a look at.
-				%h4 please choose your business size below
-				%ul 
-					%li
-						.checkbox
-							%label
-							%input{:type => "checkbox"}/
-							Small Business
-					%li
-						.checkbox
-							%label
-							%input{:type => "checkbox"}/
-							Medium Business
-					%li
-						.checkbox
-							%label
-							%input{:type => "checkbox"}/
-							Large Business
-			%br
-			%button.btn.btn-default{:type => "submit"} Submit
+				= f.input :l_name, placeholder: 'Last Name', :label => "Last Name"
+			= f.input :company, placeholder: 'Company Name'
+			= f.input :email, placeholder: 'Enter email'
+			= f.input :telephone, placeholder: 'Enter Telephone'                       
+			= f.input :buz_size, as: :radio_buttons, :label => "Please select your business size",                                      
+			collection: ['Small Business', 'Medium Business', 'Large Business'], wrapper: :vertical_radio_and_checkboxes 
+			= f.submit "Submit Request", :class => "btn btn-success q-btn"
+
+
+
+
 						

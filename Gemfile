@@ -25,6 +25,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 # Adding bootstrap to the project
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'simple_form'
 gem "font-awesome-rails"
 gem 'font-awesome-sass'
 # Use jquery as the JavaScript library

@@ -272,32 +272,31 @@ section.news-container{
  } 
 
 .testimony-container{
-        margin-top: 50px;
-        background-color: $soular-red;
-        background-image: url('construction.jpg');
-        background-attachment: fixed;
-        position: relative;
-        text-align: center;
-        p {color: $soular-black;}
-        h3{color: $soular-black;}
-        h6{color: lightcoral;}
-        h5{
-            color: $soular-black;
-        }
-        #testimony-container{
-            background-color: #ebeff1;
-            opacity: 0.8;
-            .testimony-container-cover{
-            //  background-color: #000
-                h3{padding-bottom: 20px;}
-                opacity: 0.9;
-                padding: 60px 0px;
+    margin-top: 50px;
+    background-color: $soular-red;
+    background-image: url('construction.jpg');
+    background-attachment: fixed;
+    text-align: center;
+    p {color: $soular-black;}
+    h3{color: $soular-black;}
+    h6{color: lightcoral;}
+    h5{
+        color: $soular-black;
+    }
+    #testimony-container{
+        background-color: #ebeff1;
+        opacity: 0.8;
+        .testimony-container-cover{
+            // background-color: #000;
+            h3{padding-bottom: 20px;}
+            opacity: 0.9;
+            //padding: 60px 0px;
             .testimony{
-                position: relative;
+                // position: relative;
                 // left: 50%;
                 // margin-left: -100px;
-                display: block;
-                text-align: center;
+                // display: block;
+                // text-align: center;
                 // width: 200px;
                 // height: 200px;
                 // background-color: aliceblue;
@@ -319,7 +318,7 @@ section.news-container{
                     }
                 }
             }
-            }
+        }
 
     }
 }

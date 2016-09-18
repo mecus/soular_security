@@ -167,7 +167,9 @@
     position: absolute;
     top: 10px;
     left: 50px;
-    z-index: 1001
+    z-index: 1001;
+    transition: 1s;
+    -webkit-transition: 1s;
     // img{width: 200px; height: 46px;}
 
   }
@@ -291,12 +293,16 @@
   }
 
   .soular-logo{
-    width: 200px;
-    display: flex;
-    margin: 0px 0px;
-    left: 10px;
-    top: 10px;
-    text-align: left !important;
+    a.logo-wrapper{
+      width: 200px;
+      display: flex;
+      margin: 0px 0px;
+      left: 10px;
+      top: 10px;
+      text-align: left !important;
+      transition-timing-function: ease-in-out; 
+      -webkit-transition-timing-function: ease-in-out;
+    }
   }
   .mobile-nav{
     display: block;

@@ -34,6 +34,7 @@ body{
     text-align: center;
     p.notice, p.alert{color: green; text-align: center;}
   }
+
 }
 
 // All Media Query start here >>
@@ -118,10 +119,10 @@ body{
   // .hidden-on-small{
   //   opacity: 0 !important;
   // }
+
 }
 
 //Media Query Ends here >>
-
 
 
 
@@ -335,11 +336,11 @@ body{
   // background-color: $soular-red;
   // padding-top: 50px;
   .caption-title-1, .caption-title-2, .caption-title-3, .caption-title-4{
-    position: relative;
-    top: -30px;
-    left: 50%;
-    width: 300px;
-    margin-left: -150px !important;
+    // position: relative;
+    // top: -30px;
+    // left: 50%;
+    // width: 300px;
+    // margin-left: -150px !important;
     text-align: center !important;
     h4{color: black;}
     h6{color: grey;}
@@ -398,14 +399,15 @@ body{
 .link-top{
   position: fixed;
   top: 92%;
-  right: 20px;
+  right: 15px;
   z-index: 1010;
   padding: 5px;
   border: 1px solid;
   border-color: $soular-red;
   border-radius: 6px;
-  background-color: black;
-  i{font-size: 20px; color: #fff;}
+  background-color: $soular-mainblack;
+  i{font-size: 20px; color: #fff;&:hover{opacity: 0.5;}}
+  &:hover{background-color: $soular-black;}
 }
 .footer{
   height: 60px;

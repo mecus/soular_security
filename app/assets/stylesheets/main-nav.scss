@@ -162,14 +162,15 @@
 }
 //styling main logo
 .soular-logo{
-  margin: 20px 50px;
-  position: absolute;
-  top: 10px;
-  left: 50px;
-  z-index: 1001
-  // img{width: 200px; height: 46px;}
+  a.logo-wrapper{
+    margin: 20px 50px;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    z-index: 1001
+    // img{width: 200px; height: 46px;}
 
-
+  }
 }
 // main navigagtion ends here
 

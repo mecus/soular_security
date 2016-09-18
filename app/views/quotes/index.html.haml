@@ -1,0 +1,31 @@
+= render "partials/navigation"
+.container
+	%h2 List of Quotes submitted
+	%table
+		%thead
+			%tr
+				%th First Name
+				%th Last Name
+				%th Company
+				%th Email
+				%th Telephone
+				%th Business Size
+				%th
+				%th
+				%th
+				%th
+		%tbody
+			- @quotes.each do |quote|
+				%tr
+					%td= quote.f_name
+					%td= quote.l_name
+					%td= quote.company
+					%td= quote.email
+					%td= quote.telephone
+					%td= quote.buz_size
+					%td= link_to 'Show', quote
+					%td= link_to 'Edit', edit_quote_path(quote)
+					%td= link_to 'Destroy', quote, :method => :delete, :data => { :confirm => 'Are you sure?' }
+	%br
+	%br
+	= link_to "New Quote", new_quote_path

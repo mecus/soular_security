@@ -109,11 +109,13 @@
         width: 50%;
         left: 50%;
         margin-left: -25%;
+        text-align: center;
         h1{
             // font-family: Roboto, sans-serif;
             font-size: 4em;
             color: #fff;
             text-transform: uppercase;
+            text-align: center;
         }
         h3{color: #fff;}
 
@@ -121,9 +123,13 @@
 }
 section.services.container{
     margin-top: 0px;
+    .s-item{
+        padding: 4px;
+        margin: 0px;
+    }
 }
 #service-row-top, #service-row-middle, #service-row-bottom{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 .service-card{
     padding-bottom: 10px; 

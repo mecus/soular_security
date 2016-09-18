@@ -1,0 +1,12 @@
+
+= simple_form_for @quote, :remote => true  do |f|
+	= f.input :f_name, placeholder: 'First Name'
+	= f.input :l_name, placeholder: 'Last Name'
+	= f.input :company, placeholder: 'Company'
+	= f.input :email, placeholder: 'Enter email'
+	= f.input :telephone, placeholder: 'Enter Telephone'
+                                       
+	= f.input :buz_size, as: :radio_buttons,                                       
+	collection: ['Small Business', 'Medium Business', 'Large Business'], wrapper: :vertical_radio_and_checkboxes 
+	= f.button :submit
+

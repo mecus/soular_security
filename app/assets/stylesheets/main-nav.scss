@@ -56,6 +56,15 @@
     }
   }
 }
+@media only screen and (max-width: 568px){
+  .social-media{
+    position: absolute;
+    float: right;
+    top: 567px;
+    width: 50px;
+    right: 0px;
+  }
+}
 .social-media{
   position: absolute;
   top: 567px;
@@ -83,10 +92,12 @@
     color: #fff;
   }
   .facebook, .twitter, .linkedin, .googleplus{
-    transition: 2s;
-    -webkit-transition: 2s;
+    width: 50px;
+    transition: 0.1s;
+    -webkit-transition: 0.1s;
     &:hover{
       width: 60px;
+      border-radius: 0px 6px 6px 0px;
       transition-timing-function: ease-in-out; 
       -webkit-transition-timing-function: ease-in-out;
     }
@@ -156,6 +167,8 @@
   top: 10px;
   left: 50px;
   z-index: 1001
+  // img{width: 200px; height: 46px;}
+
 
 }
 // main navigagtion ends here
@@ -213,14 +226,15 @@
     background-color: rgba(0,0,0, 0.5);
     h2{color: #fff; padding: 0 20px; text-align: center;}
     .quote-wrapper{
-        padding: 20px 20px;
-        p{color: #fff; text-align: center;}
-        label{color: #fff;}
-        input{background-color: transparent;
-            border: 1px solid;
-            border-color: green;
-            &:focus{background-color: lightgay; border-color: red;}
-        }
+      padding: 20px 20px;
+      p{color: #fff; text-align: center;}
+      label{color: #fff;}
+      input{background-color: transparent;
+        border: 1px solid;
+        border-color: green;
+        &:focus{background-color: lightgay; border-color: red;}
+      }
+      .q-btn{background-color: $soular-red; border: none;}
     }
     .cname{
         padding: 0 5px;

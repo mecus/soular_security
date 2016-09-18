@@ -3,19 +3,19 @@
   .header-content
     / %img{:src=>"assets/service_header.jpg", :alt=>"Header-img"}
     .header-image-cover
-  .header-text.w3-center
+  .header-text
     %h1.w3-allerta.w3-animate-zoom Services
     %h3.w3-animate-bottom Browse through our service and make your choice
 %section.services.container
-  #service-row-top.row
-    .col-xs-6.col-sm-6.col-md-3.lg-3
+  #service-row-top.w3-row
+    .w3-col.s6.m3.l3.s-item
       .service-card.w3-card-4
         %img.img-responsive{:alt => "Header-img", :src => "assets/soular_guard_small.jpg"}
           .service-card-text
             %h3 Security Guard
             %a{:href => "/security_guard"}
               %button browse
-    .col-xs-6.col-sm-6.col-md-3.lg-3
+    .w3-col.s6.m3.l3.s-item
       .service-card.w3-card-4
         %img.img-responsive{:alt => "Header-img", :src => "assets/close_protection_small.jpg"}
           .service-card-text
@@ -23,14 +23,14 @@
             %a{:href => "/close_protection"} 
               %button.btn.btn-primary browse
               
-    .col-xs-6.col-sm-6.col-md-3.lg-3
+    .w3-col.s12.m3.l3.s-item
       .service-card.w3-card-4
         %img.img-responsive{:alt => "Header-img", :src => "assets/event_security_small.jpg"}
           .service-card-text
             %h3 Event Security
             %a{:href => "/event_security"}
               %button browse
-    .col-xs-6.col-sm-6.col-md-3.lg-3
+    .w3-col.s12.m3.l3.s-item
       .service-card.w3-card-4
         %img.img-responsive{:alt => "Header-img", :src => "assets/construction_security_small.jpg"}
           .service-card-text
@@ -38,22 +38,22 @@
             %a{:href => "/construction_security"}
               %button browse
   / This is where the top service row ends
-  #service-row-middle.row
-    .col-xs-6.col-sm-4.col-md-4.col-lg-4
+  #service-row-middle.w3-row
+    .w3-col.s6.m4.l4.s-item
       .service-card.w3-card-4
         %img.img-responsive{:alt => "Header-img", :src => "assets/hospitality_security_small.jpg"}
           .service-card-text
             %h3 Hospitality Security
             %a{:href => "/hospitality_security"}
               %button browse
-    .col-xs-6.col-sm-4.col-md-4.col-lg-4
+    .w3-col.s6.m4.l4.s-item
       .service-card.w3-card-4
         %img.img-responsive{:alt => "Header-img", :src => "assets/retail_security_small.jpg"}
           .service-card-text
             %h3 Retail Security
             %a{:href => "/retail_security"}
               %button browse
-    .col-xs-12.col-sm-4.col-md-4.col-lg-4
+    .w3-col.s12.m4.l4.s-item
       .service-card.w3-card-4
         %img.img-responsive{:alt => "Header-img", :src => "assets/concierge_security_small.jpg"}
           .service-card-text
@@ -61,29 +61,29 @@
             %a{:href => "/concierge_security"}
               %button browse
   / This is the end of the middle service row
-  #service-row-bottom.row
-    .col-xs-6.col-sm-6.col-md-3.col-lg-3
+  #service-row-bottom.w3-row
+    .w3-col.s6.m3.l3.s-item
       .service-card.w3-card-4
         %img.img-responsive{:alt => "Header-img", :src => "assets/corporate_security_small.jpg"}
           .service-card-text
             %h3 Corporate/Office
             %a{:href => "/corporate_security"}
               %button browse
-    .col-xs-6.col-sm-6.col-md-3.col-lg-3
+    .w3-col.s6.m3.l3.s-item
       .service-card.w3-card-4
         %img.img-responsive{:alt => "Header-img", :src => "assets/hotel_security_small.jpg"}
           .service-card-text
             %h3 Hotel Security
             %a{:href => "/hotel_security"}
               %button browse
-    .col-xs-6.col-sm-6.col-md-3.col-lg-3
+    .w3-col.s6.m3.l3.s-item
       .service-card.w3-card-4
         %img.img-responsive{:alt => "Header-img", :src => "assets/mobile_security_small.jpg"}
           .service-card-text
             %h3 Mobile Security
             %a{:href => "/mobile_security"}
               %button browse
-    .col-xs-6.col-sm-6.col-md-3.col-lg-3
+    .w3-col.s6.m3.l3.s-item
       .service-card.w3-card-4
         %img.img-responsive{:alt => "Header-img", :src => "assets/industrial_security_small.jpg"}
           .service-card-text

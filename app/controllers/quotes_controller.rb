@@ -3,6 +3,7 @@ class QuotesController < ApplicationController
 
 	def index
 		@quotes = Quote.all
+
 	end
 	def show
 		@quote = Quote.find(params[:id])
@@ -16,6 +17,7 @@ class QuotesController < ApplicationController
 		@quote = Quote.new(quote_params)
 		respond_to do |format|
 			if @quote.save
+				QuoteMailer.request_confirmation(@quote).deliver_now
 				format.html {redirect_to root_path, notice: "Your request was sent sucessfully"}
 				format.js
 			else

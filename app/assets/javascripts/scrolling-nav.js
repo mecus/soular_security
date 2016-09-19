@@ -21,6 +21,23 @@
 // }
 // window.addEventListener("scroll", yScroll);
 
+var topage, yPos;
+function yScroll(){
+  topage = document.getElementById('linktop');
+  yPos = window.pageYOffset;
+
+  if(yPos > 600){
+  	topage.style.display = "block";
+ 
+  } else {
+    topage.style.display = "none";
+
+  }
+}
+window.addEventListener("scroll", yScroll);
+
+
+
 
 
 

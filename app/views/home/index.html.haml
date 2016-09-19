@@ -5,9 +5,9 @@
 	= render "quote"
 	= render "home_menu"
 .scroll-cavet
-	%a{:href=>"#"}
+	%a.page-scroll{:href=>"#about-us"}
 		%i.glyphicon.glyphicon-menu-down
-%section.container-content
+%section.container-content#about-us
 	%h1.w3-tag-line.w3-roboto.w3-animate-zoom Who we are
 	#why-soular.w3-row.container.w3-animate-bottom
 		#power1.w3-col.s4
@@ -97,7 +97,7 @@
 				.linkButtons.w3-center
 					%a{:href => "#"} more
 
-%section.news-container
+%section.news-container#shop
 	%h1.w3-tag-line.w3-roboto Shop
 	= render "partials/shop"
 
@@ -105,7 +105,7 @@
 	= render "partials/testimony"
 
 
-.link-top
+.link-top#linktop
 	%a.page-scroll.right{:href => "#page-top"}
 		%i.glyphicon.glyphicon-menu-up
 

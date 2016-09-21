@@ -14,10 +14,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="page-top"></div>
   <div class="flash-notice">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
   </div>
 	<%= yield %>
+  <div class="link-top" id="linktop">
+    <a class="page-scroll right" href="#page-top">
+      <i class="glyphicon glyphicon-menu-up"></i>
+    </a>
+    
+  </div>
+
 </body>
 </html>

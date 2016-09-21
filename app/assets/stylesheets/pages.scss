@@ -58,6 +58,7 @@
             color: #fff;
             padding-right: 40px;
             margin: 0px;
+            i{font-size: 3vw;}
         }
 
     }
@@ -104,5 +105,56 @@
        
     }
 }
+.login-container{
+    position: relative;
+    background-color: lightgray;
+    height: 700px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    .login-page{
+        padding: 20px;
+        background-color: $soular_red;
+        position: relative;
+        width: 400px;
+        left: 50%;
+        margin-left: -200px;
+        h2{color: #fff; font-weight: bold; text-align: center;}
+        color: #fff;
+
+    }
+}
+.share-link{
+    position: relative;
+    width: 400px;
+    left: 50%;
+    margin-left: -200px;
+    font-size: 14px;
+    background-color: black;
+    padding: 10px 20px;
+    color: green;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 768px){
+    .login-container{
+        height: 100vh;
+        padding: 0px 20px 20px 20px;
+        .login-page{
+            padding: 20px;
+            background-color: $soular_red;
+            width: 100vw;
+            h2{color: #fff; font-weight: bold; text-align: center;}
+            color: #fff;
+
+        }
+    }
+    .share-link{
+        width: 100vw;
+    }
+}
+
+
+
+
 
 

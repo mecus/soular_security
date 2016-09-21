@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :visitors
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, controllers: {
     sessions: 'users/sessions'

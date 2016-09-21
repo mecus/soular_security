@@ -1,0 +1,21 @@
+= render "partials/navigation"
+.container
+
+	%p#notice= notice
+
+	%p
+		%b Name:
+		= @visitor.name
+	%p
+		%b Email:
+		= @visitor.email
+	%p
+		%b Telephone:
+		= @visitor.telephone
+	%p
+		%b Content:
+		= @visitor.content
+
+	= link_to 'Edit', edit_visitor_path(@visitor)
+	\|
+	= link_to 'Back', visitors_path

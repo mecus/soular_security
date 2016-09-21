@@ -65,5 +65,23 @@ ready = function() {
 $(document).ready(ready);
 $(document).on('page:load', ready);
 
+var map;
 
+function initMap() {
+	var location = {lat: 51.5308113, lng: -0.122081}
+	map = new google.maps.Map(document.getElementById('contact-map'), {
+	  center: location,
+	  zoom: 18,
+	  zoomControl: false,
+	  scaleControl: false,
+	  scrollwheel: false,
+	  disableDoubleClickZoom: true
+	});
+	var marker = new google.maps.Marker({
+	    position: location,
+	    map: map,
+	    title: 'Soular Security'
+  	});
+}
+$(document).ready(initMap);
 

@@ -1,0 +1,11 @@
+= simple_form_for(@visitor) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.input :email
+    = f.input :telephone
+    = f.input :content, :label => "Message"
+
+  .form-actions
+    = f.button :submit

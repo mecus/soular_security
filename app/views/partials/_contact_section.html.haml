@@ -5,46 +5,23 @@
 		.w3-row
 			.w3-col.s12.m4.l4.quote-text
 				%h2 
-				%p 102 Pentoville Road
+				%p 257-259 Pentonville Rd
+				%p Kings Cross
 				%p London
-				%p NW9 8KM
+				%p N1 9NL
 				%br
 				%p Email: admin@soular.com
 				%p Telephone: 0203467592
+				%p Fax: 020 8150 5611
 				
 			.w3-col.s12.m8.l8.quote-form
 				%form
-					.form-group
-						%label{:for => "name"} Name
-						%input#name.form-control{:placeholder => "Your name", :type => "name"}/
-					.form-group
-						%label{:for => "companyName"} Company
-						%input#companyname.form-control{:placeholder => "Company Name", :type => "company name"}/
-					.form-group
-						%label{:for => "exampleInputEmail1"} Email address
-						%input#exampleInputEmail1.form-control{:placeholder => "Email", :type => "email"}/
-					.form-group
-						%label{:for => "textarea"} Message
-						%textarea.form-control{:rows => "3"}
-					.form-group
-						// %label{:for => "exampleInputFile"} File input
-						// %input#exampleInputFile{:type => "file"}/
-						// %p.help-block Please upload any file you want us to have a look at.
-						/ %h4 please choose your business size below
-						/ %ul 
-						/ 	%li
-						/ 		.checkbox
-						/ 			%label
-						/ 			%input{:type => "checkbox"}/
-						/ 			Small Business
-						/ 	%li
-						/ 		.checkbox
-						/ 			%label
-						/ 			%input{:type => "checkbox"}/
-						/ 			Medium Business
-						/ 	%li
-						/ 		.checkbox
-						/ 			%label
-						/ 			%input{:type => "checkbox"}/
-						/ 			Large Business
-					%button.btn.btn-success{:type => "submit"} Submit
+					= simple_form_for @visitor do |f|
+						= f.error_notification
+
+						= f.input :name
+						= f.input :email
+						= f.input :telephone
+						= f.input :content, :label => "Message"
+
+						= f.submit "Submit", class: "btn btn-success"

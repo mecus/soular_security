@@ -14,7 +14,8 @@
 
 .soular-logo.container
   %a.logo-wrapper{:href=>"/"}
-    %img.img-responsive{:src=>"assets/soular-new-logo-mob.png", :alt=>"Logo"}
+    = image_tag("soular-new-logo-mob.png", class: "img-responsive")
+    / %img.img-responsive{:src=>"assets/soular-new-logo-mob.png", :alt=>"Logo"}
 
 .user-session
   - @users.each do |user|

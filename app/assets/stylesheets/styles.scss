@@ -165,7 +165,7 @@ body{
 .navbar-low{
   position: relative;
   background-color: black;
-  padding: 4px 0px 0px 0px !important;
+  padding: 8px 0px 0px 0px !important;
   border-radius: 0;
   border: 0px;
   margin: 0px;
@@ -173,6 +173,10 @@ body{
   li{
     color: #fff;
     font-size: 14px;
+    // font-weight: bold;
+    // font-family: Roboto;
+    // letter-spacing: 1px;
+
   }
   li a:hover{
     color: #fff !important;

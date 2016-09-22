@@ -108,8 +108,8 @@
 .login-container{
     position: relative;
     background-color: lightgray;
-    height: 700px;
-    padding-top: 50px;
+    height: 100%;
+    padding-top: 20px;
     padding-bottom: 20px;
     .login-page{
         padding: 20px;
@@ -139,6 +139,7 @@
     .login-container{
         height: 100%;
         padding-top: 0px;
+        padding-bottom: 0px;
         .login-page{
 
             background-color: $soular_red;

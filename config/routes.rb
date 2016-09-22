@@ -1,29 +1,26 @@
 Rails.application.routes.draw do
 
-
+  devise_scope :user do
+    get 'login', to: 'users/sessions#new'
+    get 'register', to: 'users/registrations#new'
+  end
   resources :visitors
+  resources :quotes
+  resources :posts
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users, controllers: {
     sessions: 'users/sessions'
 
   }
-  devise_scope :user do
-    get 'login', to: 'users/sessions#new'
-    get 'register', to: 'users/registrations#new'
-  end
-  resources :quotes
-  resources :posts
+  
+  root 'home#index'
   get 'about' => 'home#about'
   get 'contact' => 'home#contact'
   get 'career' => 'home#career'
   get 'blog' => 'home#blog'
   get 'shop' => 'home#shop'
 
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  root 'home#index'
+  
   get 'services' => 'services#index'
   get 'security_guard' => 'services#security_guard'
   get 'close_protection' => 'services#close_protection'
